@@ -97,6 +97,71 @@ export const copy = {
         'Είτε αναζητάτε ακίνητο, είτε σκέφτεστε να πουλήσετε, είτε εξετάζετε μια επένδυση στην Κρήτη, πείτε μας τι θέλετε να πετύχετε.',
       cta: 'Μιλήστε με την KYDORA',
     },
+    // Πηγή: "KYDORA Website Production Copy V1 — Properties Listing & Search GR/EN" (13/09/2026).
+    listing: {
+      eyebrow: 'Επιλεγμένα ακίνητα στην Κρήτη',
+      heading: 'Βρείτε το ακίνητο που αξίζει να εξετάσετε.',
+      lede:
+        'Η καλή αναζήτηση ξεκινά από καλύτερες επιλογές, καθαρή πληροφορία και έναν πιο οργανωμένο τρόπο να καταλάβετε ποια ακίνητα ταιριάζουν πραγματικά στον στόχο σας.',
+      support:
+        'Η KYDORA παρουσιάζει επιλεγμένα ακίνητα με έμφαση στην ποιότητα της πληροφορίας, την παρουσίαση και το σωστό πλαίσιο για κάθε επιλογή.',
+      cta2: 'Πείτε μας τι ψάχνετε',
+      count: (n) => `${n} ${n === 1 ? 'ακίνητο' : 'ακίνητα'} διαθέσιμα δημόσια`,
+      note: 'Τα αποτελέσματα εμφανίζουν μόνο ακίνητα εγκεκριμένα για δημόσια προβολή.',
+      curatedHeading: 'Δεν βλέπετε απλώς έναν κατάλογο ακινήτων.',
+      curatedBody:
+        'Κάθε ακίνητο που εμφανίζεται δημόσια πρέπει να έχει περάσει τη βασική διαδικασία δημοσίευσης της KYDORA: επαρκή στοιχεία, εγκεκριμένη παρουσίαση και πληροφορία κατάλληλη για δημόσια προβολή.',
+      lowHeading: 'Λίγες επιλογές, αλλά ίσως πιο σχετικές.',
+      lowBody:
+        'Η περιορισμένη λίστα μπορεί να σημαίνει ότι τα κριτήριά σας είναι αρκετά συγκεκριμένα. Δείτε τις διαθέσιμες επιλογές ή στείλτε μας το brief σας για πιο στοχευμένη αναζήτηση.',
+      emptyHeading: 'Δεν βρήκαμε ακριβώς αυτό που ζητήσατε.',
+      emptyBody:
+        'Αυτό δεν σημαίνει ότι δεν υπάρχει. Μπορεί να μην έχει δημοσιευτεί ακόμη ή να χρειάζεται πιο στοχευμένη αναζήτηση.',
+      emptySupport:
+        'Η KYDORA μπορεί να δημιουργήσει οργανωμένο προφίλ αναζήτησης και να αναζητήσει σχετικές επιλογές μέσα από το διαθέσιμο και συνεργαζόμενο δίκτυο της αγοράς.',
+      assistHeading: 'Δεν θέλετε να ψάχνετε μόνοι σας;',
+      assistBody:
+        'Πείτε μας τον στόχο, την περιοχή, το budget και τα βασικά σας κριτήρια. Θα οργανώσουμε την αναζήτηση γύρω από αυτό που πραγματικά χρειάζεστε.',
+      cardCta: 'Δείτε το ακίνητο',
+      back: 'Όλα τα ακίνητα',
+    },
+
+    // Πηγή: "KYDORA Website Production Copy V1 — Property Detail Framework GR/EN" (13/09/2026).
+    detail: {
+      notFoundTitle: 'Το ακίνητο δεν είναι διαθέσιμο.',
+      notFoundBody:
+        'Μπορεί να έχει αποσυρθεί από τη δημόσια προβολή ή να έχει αλλάξει η διεύθυνσή του. Δείτε τα διαθέσιμα ακίνητα ή επικοινωνήστε μαζί μας.',
+      cta1: 'Ζητήστε περισσότερες πληροφορίες',
+      cta2: 'Προγραμματίστε επίσκεψη',
+      microcopy:
+        'Οι πληροφορίες της σελίδας βασίζονται στα διαθέσιμα και επαληθευμένα στοιχεία του ακινήτου. Πρόσθετες πληροφορίες παρέχονται κατόπιν αιτήματος όπου είναι διαθέσιμες και επιτρέπεται η κοινοποίησή τους.',
+      storyHeading: 'Το ακίνητο',
+      factsHeading: 'Βασικά στοιχεία',
+      f: {
+        code: 'Κωδικός ακινήτου',
+        price: 'Ζητούμενη τιμή',
+        area: 'Επιφάνεια',
+        type: 'Τύπος',
+        subtype: 'Υποκατηγορία',
+        location: 'Περιοχή',
+        mandate: 'Ανάθεση',
+      },
+      verifyHeading: 'Τι γνωρίζουμε — και τι χρειάζεται ακόμη έλεγχο',
+      verifyBody:
+        'Ξεχωρίζουμε τα επιβεβαιωμένα στοιχεία από όσα απαιτούν ανεξάρτητο νομικό, τεχνικό, πολεοδομικό ή φορολογικό έλεγχο. Όπου ένα στοιχείο παραμένει προς επιβεβαίωση, δεν το παρουσιάζουμε ως δεδομένο.',
+      locationHeading: 'Τοποθεσία',
+      locationNote:
+        'Η ακριβής θέση του ακινήτου γνωστοποιείται κατόπιν συνεννόησης, όπου έχει εγκριθεί από τον ιδιοκτήτη.',
+      advisoryHeading: 'Χρειάζεστε περισσότερα από τα στοιχεία της αγγελίας;',
+      advisoryBody:
+        'Μπορούμε να σας βοηθήσουμε να κατανοήσετε καλύτερα το ακίνητο, την περιοχή και τα επόμενα βήματα της αγοράς. Όπου απαιτείται νομικός, τεχνικός, φορολογικός ή χρηματοδοτικός έλεγχος, συντονίζουμε τη διαδικασία με τον κατάλληλο επαγγελματία χωρίς να υποκαθιστούμε τη δική του αξιολόγηση.',
+      advisoryCta: 'Μιλήστε με την KYDORA για αυτό το ακίνητο',
+      inquiryHeading: 'Ενδιαφέρεστε για αυτό το ακίνητο;',
+      inquiryIntro:
+        'Στείλτε μας τα στοιχεία σας και πείτε μας αν θέλετε περισσότερες πληροφορίες ή να οργανώσουμε μία επίσκεψη.',
+      onRequest: 'Κατόπιν αιτήματος',
+      media: 'Κάτοψη και πρόσθετο υλικό διατίθενται όπου έχουν εγκριθεί για δημόσια κοινοποίηση.',
+    },
     footer: {
       office: 'Γραφείο',
       services: 'Υπηρεσίες',
@@ -201,6 +266,69 @@ export const copy = {
       body:
         'Whether you are looking for a property, considering a sale or exploring an investment in Crete, tell us what you want to achieve.',
       cta: 'Talk to KYDORA',
+    },
+    listing: {
+      eyebrow: 'Curated Properties in Crete',
+      heading: 'Find the property worth exploring.',
+      lede:
+        'A better property search starts with better options, clearer information and a more organised way to understand which properties genuinely fit your objective.',
+      support:
+        'KYDORA presents selected properties with a focus on information quality, presentation and relevant context.',
+      cta2: 'Tell Us What You’re Looking For',
+      count: (n) => `${n} ${n === 1 ? 'property' : 'properties'} publicly available`,
+      note: 'Results include only properties approved for public presentation.',
+      curatedHeading: 'You are not simply browsing inventory.',
+      curatedBody:
+        'Every property shown publicly should have passed the core KYDORA publishing workflow: sufficient information, approved presentation and public-safe data.',
+      lowHeading: 'Fewer options, potentially more relevant.',
+      lowBody:
+        'A limited result set may mean your criteria are highly specific. Explore the available options or send us your brief for a more targeted search.',
+      emptyHeading: 'We could not find an exact match.',
+      emptyBody:
+        'That does not necessarily mean the right property is unavailable. It may not be publicly listed yet or may require a more targeted search.',
+      emptySupport:
+        'KYDORA can structure a buyer request and explore relevant opportunities across the available and collaborative market network.',
+      assistHeading: 'Prefer not to search alone?',
+      assistBody:
+        'Tell us your objective, preferred area, budget and key criteria. We will structure the search around what you actually need.',
+      cardCta: 'View Property',
+      back: 'All properties',
+    },
+
+    detail: {
+      notFoundTitle: 'This property is not available.',
+      notFoundBody:
+        'It may have been withdrawn from public presentation or its address may have changed. Explore the available properties or get in touch.',
+      cta1: 'Request More Information',
+      cta2: 'Schedule a Viewing',
+      microcopy:
+        'Information on this page is based on the available verified property data. Further details can be provided on request where available and appropriate for disclosure.',
+      storyHeading: 'The Property',
+      factsHeading: 'Key Facts',
+      f: {
+        code: 'Property ID',
+        price: 'Asking Price',
+        area: 'Area',
+        type: 'Type',
+        subtype: 'Subcategory',
+        location: 'Area',
+        mandate: 'Mandate',
+      },
+      verifyHeading: 'What is known — and what still requires verification',
+      verifyBody:
+        'We distinguish verified property information from matters that still require independent legal, technical, planning or tax review. Where something remains subject to verification, it is not presented as established fact.',
+      locationHeading: 'Location',
+      locationNote:
+        'The exact position of the property is disclosed on request, where approved by the owner.',
+      advisoryHeading: 'Need more than the listing details?',
+      advisoryBody:
+        'We can help you understand the property, its location and the next steps involved in a potential purchase. Where legal, technical, tax or financing review is required, we coordinate with the appropriate professional without replacing their independent assessment.',
+      advisoryCta: 'Talk to KYDORA About This Property',
+      inquiryHeading: 'Interested in this property?',
+      inquiryIntro:
+        'Send us your details and let us know whether you would like further information or to arrange a viewing.',
+      onRequest: 'On request',
+      media: 'Floorplans and additional material are shown where approved for public disclosure.',
     },
     footer: {
       office: 'Office',

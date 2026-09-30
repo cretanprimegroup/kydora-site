@@ -54,7 +54,10 @@ npm run dev
 ## Εκκρεμότητες
 
 - [ ] Φωτογραφίες ακινήτων — κάθε `.plate` στον κώδικα είναι θέση φωτογραφίας
-- [ ] Σελίδα Property Detail
 - [ ] Σελίδες Seller / Buyer / Developers
-- [ ] Φόρμες με σύνδεση στο CRM (πηγή + Property ID)
+- [ ] Φόρμες με σύνδεση στο CRM (πηγή + Property ID) — τώρα οι CTA πάνε σε email
+- [ ] Φίλτρα και ταξινόμηση στη σελίδα ακινήτων (Listing & Search V1 §2–3)
+- [ ] Υπολογιστές δόσης και εξόδων αγοράς (Property Detail V1 §8)
+- [ ] Gallery, κάτοψη, παρόμοια ακίνητα (Property Detail V1 §6, §10)
 - [ ] Cookie consent και νομικές σελίδες
+- [ ] **Διαγραφή του `/api/notion-check` πριν το launch** — διαγνωστικό, όχι production

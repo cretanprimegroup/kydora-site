@@ -1,50 +1,9 @@
 import { copy } from '../../content/copy';
 import { getPublishedProperties } from '../../lib/notion';
+import PropertyCard from '../../components/PropertyCard';
 
 // Τα ακίνητα ξαναδιαβάζονται από το Notion κάθε 10 λεπτά.
 export const revalidate = 600;
-
-function money(n, locale) {
-  if (typeof n !== 'number') return null;
-  return new Intl.NumberFormat(locale === 'el' ? 'el-GR' : 'en-GB', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 0,
-  }).format(n);
-}
-
-function PropertyCard({ p, t, locale }) {
-  const area =
-    typeof p.area === 'number'
-      ? new Intl.NumberFormat(locale === 'el' ? 'el-GR' : 'en-GB').format(p.area) +
-        (locale === 'el' ? ' τ.μ.' : ' m²')
-      : null;
-  const meta = [area, p.location].filter(Boolean).join(' · ');
-
-  return (
-    <a className="card" href={`/${locale}/akinita/${p.slug}`}>
-      <div className="plate shot">
-        {p.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={p.image} alt={p.title || ''} />
-        ) : (
-          <>
-            <span className="mark" aria-hidden="true" />
-            <span className="ph">{t.properties.photoPending}</span>
-          </>
-        )}
-      </div>
-      <h3>{p.title}</h3>
-      {meta ? <p className="meta">{meta}</p> : null}
-      <div className="row">
-        <span className="price">{money(p.price, locale)}</span>
-        <span className="badge">
-          {p.mandate === 'Exclusive' ? t.properties.exclusive : p.mandate === 'Open' ? t.properties.open : ''}
-        </span>
-      </div>
-    </a>
-  );
-}
 
 export default async function Home({ params }) {
   const { locale } = params;

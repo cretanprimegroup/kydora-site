@@ -318,3 +318,98 @@ footer { padding-block: 44px 52px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ============================================================
+   Properties listing + Property Detail
+   Πηγή: Property Detail Framework V1 §15, Listing & Search V1 §14.
+   Editorial, όχι πυκνότητα portal. Ivory φόντο, Charcoal κείμενο,
+   Olive ενέργειες, Bronze μόνο σε λεπτομέρεια.
+   ============================================================ */
+
+.hero-slim { padding-block: clamp(44px, 6vw, 76px); }
+.hero-slim h1 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); margin-top: 18px; max-width: 18ch; }
+.hero-slim .lede { margin-top: 18px; }
+
+.res-top {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 8px 20px; padding-bottom: 20px; border-bottom: 1px solid var(--rule-soft);
+}
+.count {
+  font-family: var(--f-body); font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg);
+}
+.note { font-size: 0.82rem; color: var(--fg-2); line-height: 1.75; }
+.res-top .note { margin-left: auto; }
+@media (max-width: 640px) { .res-top .note { margin-left: 0; } }
+.res-top + .cards { margin-top: 40px; }
+
+.aside-note {
+  margin-top: clamp(48px, 6vw, 80px); padding-top: 32px;
+  border-top: 1px solid var(--rule-soft); display: grid; gap: 14px; max-width: 58ch;
+}
+.aside-note h2 { font-size: clamp(1.3rem, 2.4vw, 1.75rem); }
+
+/* Property Detail */
+.pd-top { padding-block: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 40px); }
+.pd-back { margin-bottom: 26px; }
+.pd-back .arw { transition: transform 0.2s; }
+.pd-back:hover .arw { transform: translateX(-4px); }
+.pd-top h1 {
+  font-size: clamp(1.75rem, 3.4vw, 2.7rem); margin-top: 14px; max-width: 22ch;
+}
+.pd-facts {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; margin-top: 24px;
+  font-family: var(--f-body); font-size: 0.95rem; color: var(--fg-2);
+  font-variant-numeric: tabular-nums;
+}
+.pd-facts .price {
+  font-family: var(--f-display); font-size: clamp(1.4rem, 2.4vw, 1.9rem); color: var(--fg);
+}
+.pd-facts .code {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--bronze); border: 1px solid var(--rule); border-radius: 2px; padding: 4px 10px;
+}
+.pd-top .routes { margin-top: 28px; }
+.micro { margin-top: 24px; max-width: 64ch; font-size: 0.8rem; color: var(--fg-2); line-height: 1.8; }
+
+.pd-hero { aspect-ratio: 16 / 9; }
+.pd-hero .mark { width: 14%; }
+.pd-hero img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 640px) { .pd-hero { aspect-ratio: 4 / 3; } }
+
+.pd-grid {
+  display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 76px); align-items: start;
+}
+@media (max-width: 900px) { .pd-grid { grid-template-columns: 1fr; gap: 44px; } }
+.pd-main h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+.pd-main .pd-h2 { margin-top: clamp(38px, 4.5vw, 60px); }
+.pd-main .body { margin-top: 16px; color: var(--fg-2); max-width: 64ch; }
+.pd-main .note { margin-top: 16px; max-width: 64ch; }
+
+.pd-side {
+  border: 1px solid var(--rule-soft); border-radius: 3px;
+  background: var(--surface); padding: clamp(24px, 3vw, 34px);
+  position: sticky; top: 24px;
+}
+@media (max-width: 900px) { .pd-side { position: static; } }
+.pd-side h2 {
+  font-family: var(--f-body); font-size: 0.76rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg);
+}
+.facts { margin: 22px 0 0; display: grid; gap: 0; }
+.fact {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;
+  padding-block: 13px; border-top: 1px solid var(--rule-soft);
+}
+.fact:first-child { border-top: 0; padding-top: 0; }
+.fact dt { font-size: 0.82rem; color: var(--fg-2); }
+.fact dd {
+  margin: 0; font-size: 0.9rem; font-weight: 500; text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.close .ref {
+  font-family: var(--f-body); font-size: 0.72rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(242, 239, 230, 0.62);
+}
