@@ -17,30 +17,72 @@ export async function generateMetadata({ params }) {
   const t = copy[params.locale];
   if (!t) return {};
   const p = await getPropertyBySlug(params.slug);
-  if (!p) return { title: `${t.detail.notFoundTitle} | KYDORA` };
+  if (!p) return { title: t.detail.notFoundTitle };
 
   // SEO pattern §13.
   const kind = p.type || (params.locale === 'el' ? 'Ακίνητο' : 'Property');
   const where = p.location || (params.locale === 'el' ? 'Κρήτη' : 'Crete');
   const title =
     params.locale === 'el'
-      ? `${kind} προς πώληση στην ${where} | KYDORA`
-      : `${kind} for Sale in ${where} | KYDORA`;
+      ? `${kind} προς πώληση στην ${where}`
+      : `${kind} for Sale in ${where}`;
 
   return {
     title,
     description: p.shortDesc || p.title || undefined,
     alternates: {
       canonical: `/${params.locale}/akinita/${p.slug}`,
-      languages: { el: `/el/akinita/${p.slug}`, en: `/en/akinita/${p.slug}` },
+      languages: {
+        el: `/el/akinita/${p.slug}`,
+        en: `/en/akinita/${p.slug}`,
+        'x-default': `/el/akinita/${p.slug}`,
+      },
     },
     openGraph: {
       title,
       description: p.shortDesc || undefined,
-      images: p.image ? [p.image] : undefined,
+      images: p.image ? [p.image] : [{ url: '/og.png', width: 1200, height: 630 }],
       type: 'website',
     },
   };
+}
+
+// Structured data ακινήτου. Μόνο πεδία του εγκεκριμένου public layer, και
+// πάντα συνεπή με ό,τι βλέπει ο επισκέπτης — Property Detail Framework §13.
+function listingSchema(p, locale) {
+  const about = { '@type': 'Place', name: p.title || undefined };
+  if (typeof p.area === 'number') {
+    about.additionalProperty = {
+      '@type': 'PropertyValue',
+      name: locale === 'el' ? 'Επιφάνεια' : 'Area',
+      value: p.area,
+      unitCode: 'MTK',
+    };
+  }
+  if (p.location) {
+    about.address = { '@type': 'PostalAddress', addressLocality: p.location, addressCountry: 'GR' };
+  }
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateListing',
+    name: p.title || undefined,
+    description: p.shortDesc || undefined,
+    inLanguage: locale,
+    about,
+    provider: { '@type': 'RealEstateAgent', name: 'KYDORA Real Estate & Investments' },
+  };
+
+  if (typeof p.price === 'number') {
+    schema.offers = {
+      '@type': 'Offer',
+      price: p.price,
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+    };
+  }
+
+  return schema;
 }
 
 function Fact({ label, value }) {
@@ -85,6 +127,12 @@ export default async function PropertyDetail({ params }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema(p, locale)) }}
+      />
+
       <div className="pd-top">
         <div className="wrap">
           <a className="btn-3 pd-back" href={`/${locale}/akinita`}>

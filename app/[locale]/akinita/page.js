@@ -13,11 +13,11 @@ export function generateMetadata({ params }) {
   const t = copy[params.locale];
   if (!t) return {};
   return {
-    title: `${t.listing.heading} | KYDORA`,
+    title: t.listing.heading,
     description: t.listing.lede,
     alternates: {
       canonical: `/${params.locale}/akinita`,
-      languages: { el: '/el/akinita', en: '/en/akinita' },
+      languages: { el: '/el/akinita', en: '/en/akinita', 'x-default': '/el/akinita' },
     },
   };
 }
