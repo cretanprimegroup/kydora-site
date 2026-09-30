@@ -1,0 +1,219 @@
+// KYDORA Website Production Copy V1 — εγκεκριμένο κείμενο από το Notion (13/09/2026).
+// Πηγή: "KYDORA Website Production Copy V1 — Home Page GR/EN".
+// Κανόνας: GR και EN γράφονται native, δεν είναι κατά λέξη μετάφραση.
+// Αλλαγές εδώ μόνο μετά από ενημέρωση της σελίδας στο Notion.
+
+export const copy = {
+  el: {
+    locale: 'el',
+    meta: {
+      title: 'KYDORA — Ακίνητα & Επενδύσεις στην Κρήτη',
+      description:
+        'Επιλεγμένα ακίνητα, συμβουλευτική και τοπική γνώση για αγοραστές, ιδιοκτήτες και επενδυτές στην Κρήτη.',
+    },
+    nav: {
+      properties: 'Ακίνητα',
+      selling: 'Πώληση',
+      buying: 'Αγορά',
+      investments: 'Επενδύσεις',
+      developers: 'Developers',
+      contact: 'Επικοινωνία',
+    },
+    hero: {
+      eyebrow: 'KYDORA — Real Estate & Investments',
+      headline: 'Ακίνητα με σκέψη. Εκπροσώπηση με ουσία.',
+      support:
+        'Επιλεγμένα ακίνητα, συμβουλευτική και τοπική γνώση για αγοραστές, ιδιοκτήτες και επενδυτές στην Κρήτη. Με σύγχρονα εργαλεία, καθαρή πληροφόρηση και προσωπική εκπροσώπηση σε κάθε στάδιο.',
+      cta1: 'Αναζητώ ακίνητο',
+      cta2: 'Θέλω να πουλήσω',
+      cta3: 'Επενδύω στην Κρήτη',
+      panelCaption: 'Χανιά · Δυτική Κρήτη',
+    },
+    properties: {
+      heading: 'Επιλεγμένα ακίνητα',
+      intro:
+        'Επιλέγουμε να παρουσιάζουμε ακίνητα με σαφή στοιχεία, προσεγμένη εικόνα και ουσιαστικό πλαίσιο — ώστε να μπορείτε να ξεχωρίζετε πιο εύκολα ποιες επιλογές αξίζει πραγματικά να εξετάσετε.',
+      cta: 'Δείτε τα ακίνητα',
+      photoPending: 'Φωτογράφιση σε εκκρεμότητα',
+      empty: 'Δεν υπάρχουν αυτή τη στιγμή δημοσιευμένα ακίνητα.',
+      exclusive: 'Αποκλειστική',
+      open: 'Απλή ανάθεση',
+    },
+    why: {
+      eyebrow: 'Η προσέγγισή μας',
+      heading: 'Περισσότερο από μια αναζήτηση ακινήτου.',
+      items: [
+        {
+          t: 'Συμβουλευτική',
+          b: 'Δεν ξεκινάμε από το τι θέλουμε να πουλήσουμε. Ξεκινάμε από αυτό που θέλετε να πετύχετε.',
+        },
+        {
+          t: 'Τοπική γνώση',
+          b: 'Γνωρίζουμε την αγορά μέσα από τις περιοχές, τα ακίνητα και τις πραγματικές συνθήκες που διαμορφώνουν κάθε απόφαση.',
+        },
+        {
+          t: 'Παρουσίαση',
+          b: 'Κάθε ακίνητο πρέπει να παρουσιάζεται με ακρίβεια, αισθητική και σωστή εμπορική τοποθέτηση — όχι απλώς να δημοσιεύεται.',
+        },
+        {
+          t: 'Τεχνολογία',
+          b: 'Χρησιμοποιούμε δεδομένα και σύγχρονα εργαλεία για καλύτερη οργάνωση, πληροφόρηση και αποφάσεις, με την ανθρώπινη κρίση πάντα στο κέντρο.',
+        },
+      ],
+    },
+    seller: {
+      eyebrow: 'Για ιδιοκτήτες',
+      heading: 'Το ακίνητό σας αξίζει περισσότερα από μία αγγελία.',
+      body:
+        'Η σωστή πώληση απαιτεί περισσότερα από φωτογραφίες και δημοσίευση σε πλατφόρμες ακινήτων. Αξιολόγηση, τιμολόγηση, προετοιμασία, αφήγηση, στοχευμένη προβολή, διαχείριση ενδιαφέροντος και διαπραγμάτευση λειτουργούν ως μία ενιαία διαδικασία εκπροσώπησης.',
+      quote: 'We don’t just list. We represent.',
+      cta: 'Συζητήστε το ακίνητό σας μαζί μας',
+    },
+    buyer: {
+      eyebrow: 'Για αγοραστές & επενδυτές',
+      heading: 'Βρείτε το σωστό ακίνητο, όχι απλώς περισσότερες επιλογές.',
+      body:
+        'Μας λέτε τι θέλετε να πετύχετε και οργανώνουμε την αναζήτηση γύρω από τις πραγματικές σας ανάγκες. Επιλογή ακινήτων, κατανόηση περιοχής, αξιολόγηση βασικών δεδομένων, επισκέψεις, συντονισμός επαγγελματιών και υποστήριξη στη διαπραγμάτευση — με μία καθαρή εικόνα της διαδικασίας.',
+      cta1: 'Πείτε μας τι αναζητάτε',
+      cta2: 'Συζητήστε την επενδυτική σας στρατηγική',
+    },
+    developers: {
+      eyebrow: 'Ανάπτυξη ακινήτων',
+      heading: 'Ένα καλό project χρειάζεται και σωστή εμπορική στρατηγική.',
+      body:
+        'Συνεργαζόμαστε με developers, επενδυτές και ιδιοκτήτες γης για την εμπορική τοποθέτηση, την τιμολόγηση, την προετοιμασία της αγοράς, τις πωλήσεις και την αξιοποίηση πραγματικών δεδομένων ενδιαφέροντος.',
+      cta: 'Δείτε πώς συνεργαζόμαστε με Developers',
+    },
+    areas: {
+      eyebrow: 'Τοπική γνώση',
+      heading: 'Η Κρήτη δεν είναι μία αγορά.',
+      body:
+        'Κάθε περιοχή έχει διαφορετική δυναμική, χαρακτήρα, προσβασιμότητα, προσφορά και περιορισμούς. Δημιουργούμε χρήσιμη τοπική πληροφόρηση για να κατανοείτε όχι μόνο το ακίνητο, αλλά και το περιβάλλον μέσα στο οποίο βρίσκεται.',
+      cta: 'Ανακαλύψτε τις περιοχές',
+    },
+    closing: {
+      heading: 'Ας ξεκινήσουμε από το σωστό ερώτημα.',
+      body:
+        'Είτε αναζητάτε ακίνητο, είτε σκέφτεστε να πουλήσετε, είτε εξετάζετε μια επένδυση στην Κρήτη, πείτε μας τι θέλετε να πετύχετε.',
+      cta: 'Μιλήστε με την KYDORA',
+    },
+    footer: {
+      office: 'Γραφείο',
+      services: 'Υπηρεσίες',
+      company: 'Εταιρεία',
+      address: 'Πλατανιάς, Χανιά, Κρήτη',
+      legalName: 'KYDORA Real Estate & Investments',
+      endorsement: 'by Cretan Prime Group',
+      ids: 'ΑΦΜ 803168861 · Αρ. Γ.Ε.ΜΗ. 191201158000',
+      tagline: 'Real Estate. Considered.',
+    },
+  },
+
+  en: {
+    locale: 'en',
+    meta: {
+      title: 'KYDORA — Real Estate & Investments in Crete',
+      description:
+        'Curated properties, advisory and local intelligence for buyers, owners and investors in Crete.',
+    },
+    nav: {
+      properties: 'Properties',
+      selling: 'Selling',
+      buying: 'Buying',
+      investments: 'Investments',
+      developers: 'Developers',
+      contact: 'Contact',
+    },
+    hero: {
+      eyebrow: 'KYDORA — Real Estate & Investments',
+      headline: 'Real Estate. Considered.',
+      support:
+        'Curated properties, advisory and local intelligence for buyers, owners and investors in Crete. Combining modern tools, clear information and personal representation throughout the process.',
+      cta1: 'Find a Property',
+      cta2: 'Sell with KYDORA',
+      cta3: 'Invest in Crete',
+      panelCaption: 'Chania · Western Crete',
+    },
+    properties: {
+      heading: 'Curated Properties',
+      intro:
+        'We curate properties with clear information, considered presentation and meaningful context — helping you identify more quickly which opportunities are genuinely worth exploring.',
+      cta: 'Explore Properties',
+      photoPending: 'Photography pending',
+      empty: 'No properties are currently published.',
+      exclusive: 'Exclusive',
+      open: 'Open mandate',
+    },
+    why: {
+      eyebrow: 'Our Approach',
+      heading: 'More than a property search.',
+      items: [
+        {
+          t: 'Advisory',
+          b: 'We do not begin with what we want to sell. We begin with what you want to achieve.',
+        },
+        {
+          t: 'Local Intelligence',
+          b: 'We understand the market through its locations, properties and the real conditions that shape each decision.',
+        },
+        {
+          t: 'Presentation',
+          b: 'A property should be positioned and presented with accuracy and intent — not simply uploaded.',
+        },
+        {
+          t: 'Technology',
+          b: 'We use data and modern tools to improve organisation, insight and decision-making, while keeping human judgement at the centre.',
+        },
+      ],
+    },
+    seller: {
+      eyebrow: 'For Property Owners',
+      heading: 'Your property deserves more than a listing.',
+      body:
+        'A considered sale requires more than photography and portal exposure. Assessment, pricing, preparation, storytelling, targeted distribution, buyer qualification and negotiation should work as one coordinated representation process.',
+      quote: 'We don’t just list. We represent.',
+      cta: 'Discuss Your Property With Us',
+    },
+    buyer: {
+      eyebrow: 'For Buyers & Investors',
+      heading: 'Find the right property, not just more options.',
+      body:
+        'Tell us what you want to achieve and we structure the search around your actual requirements. Property selection, local context, preliminary assessment, viewings, professional coordination and negotiation support — with a clearer view of the process from start to finish.',
+      cta1: 'Tell Us What You’re Looking For',
+      cta2: 'Discuss Your Investment Strategy',
+    },
+    developers: {
+      eyebrow: 'Property Development',
+      heading: 'A strong project also needs a clear commercial strategy.',
+      body:
+        'We work with developers, investors and landowners on market positioning, pricing, go-to-market preparation, sales representation and the use of real buyer-demand data.',
+      cta: 'See How We Work with Developers',
+    },
+    areas: {
+      eyebrow: 'Local Intelligence',
+      heading: 'Crete is not one property market.',
+      body:
+        'Every area has its own dynamics, character, accessibility, supply and constraints. We develop useful local intelligence so you can understand not only the property, but the environment around it.',
+      cta: 'Explore Areas',
+    },
+    closing: {
+      heading: 'Start with the right question.',
+      body:
+        'Whether you are looking for a property, considering a sale or exploring an investment in Crete, tell us what you want to achieve.',
+      cta: 'Talk to KYDORA',
+    },
+    footer: {
+      office: 'Office',
+      services: 'Services',
+      company: 'Company',
+      address: 'Platanias, Chania, Crete',
+      legalName: 'KYDORA Real Estate & Investments',
+      endorsement: 'by Cretan Prime Group',
+      ids: 'VAT 803168861 · GEMI 191201158000',
+      tagline: 'Real Estate. Considered.',
+    },
+  },
+};
+
+export const locales = ['el', 'en'];
+export const defaultLocale = 'el';
