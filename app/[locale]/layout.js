@@ -2,16 +2,19 @@ import { EB_Garamond, Noto_Sans } from 'next/font/google';
 import { copy, locales } from '../../content/copy';
 import { notFound } from 'next/navigation';
 
-// ΠΡΟΣΩΡΙΝΗ ΕΠΙΛΟΓΗ — χρειάζεται απόφαση.
+// ΓΡΑΜΜΑΤΟΣΕΙΡΕΣ SITE — εγκεκριμένο 30/09/2026.
 //
-// Το brand kit ορίζει Cormorant Garamond + Montserrat. Καμία από τις δύο
-// δεν διαθέτει ελληνικά γλυφά στο Google Fonts (subsets: cyrillic, latin,
-// latin-ext, vietnamese). Το Website High-Fidelity Design Brief V1 απαιτεί
-// "πλήρης υποστήριξη ελληνικών και αγγλικών" — άρα οι δύο απαιτήσεις
-// συγκρούονται και υπερισχύει η γλώσσα.
+// EB Garamond (τίτλοι) + Noto Sans (σώμα κειμένου).
 //
-// Εδώ: EB Garamond (Garamond revival με ελληνικά) + Noto Sans (πλήρη ελληνικά).
-// Να επανεξεταστεί μαζί με ενημέρωση του brief.
+// Γιατί όχι Cormorant Garamond + Montserrat, όπως ορίζει το brand kit:
+// καμία από τις δύο δεν διαθέτει ελληνικά γλυφά στο Google Fonts
+// (subsets: cyrillic, cyrillic-ext, latin, latin-ext, vietnamese).
+// Το Website High-Fidelity Design Brief V1 απαιτεί ρητά "πλήρης
+// υποστήριξη ελληνικών και αγγλικών", άρα υπερισχύει η γλώσσα.
+// Η EB Garamond είναι επίσης αναβίωση της Garamond και κρατά το ύφος.
+//
+// Το σχεδιασμένο wordmark και τα σύμβολα ΔΕΝ επηρεάζονται — είναι vector
+// artwork, όχι κείμενο.
 
 const display = EB_Garamond({
   subsets: ['latin', 'latin-ext', 'greek'],
