@@ -21,9 +21,10 @@
   --rule-soft: #e5e1d6;
   --olive-hover: #333a2c;
 
-  /* Type */
-  --f-display: "Cormorant Garamond", Garamond, "Times New Roman", serif;
-  --f-body: Montserrat, "Helvetica Neue", Arial, sans-serif;
+  /* Type — φορτώνονται από το app/[locale]/layout.js μέσω next/font.
+     Δες το σχόλιο εκεί: οι γραμματοσειρές του brand kit δεν έχουν ελληνικά. */
+  --f-display: var(--f-display-loaded), Garamond, "Times New Roman", serif;
+  --f-body: var(--f-body-loaded), "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
   --maxw: 1160px;

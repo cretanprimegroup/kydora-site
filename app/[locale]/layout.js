@@ -1,17 +1,28 @@
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
+import { EB_Garamond, Noto_Sans } from 'next/font/google';
 import { copy, locales } from '../../content/copy';
 import { notFound } from 'next/navigation';
 
-const display = Cormorant_Garamond({
-  subsets: ['latin', 'greek'],
-  weight: ['300', '400', '500'],
+// ΠΡΟΣΩΡΙΝΗ ΕΠΙΛΟΓΗ — χρειάζεται απόφαση.
+//
+// Το brand kit ορίζει Cormorant Garamond + Montserrat. Καμία από τις δύο
+// δεν διαθέτει ελληνικά γλυφά στο Google Fonts (subsets: cyrillic, latin,
+// latin-ext, vietnamese). Το Website High-Fidelity Design Brief V1 απαιτεί
+// "πλήρης υποστήριξη ελληνικών και αγγλικών" — άρα οι δύο απαιτήσεις
+// συγκρούονται και υπερισχύει η γλώσσα.
+//
+// Εδώ: EB Garamond (Garamond revival με ελληνικά) + Noto Sans (πλήρη ελληνικά).
+// Να επανεξεταστεί μαζί με ενημέρωση του brief.
+
+const display = EB_Garamond({
+  subsets: ['latin', 'latin-ext', 'greek'],
+  weight: ['400', '500'],
   style: ['normal', 'italic'],
   variable: '--f-display-loaded',
   display: 'swap',
 });
 
-const body = Montserrat({
-  subsets: ['latin', 'greek'],
+const body = Noto_Sans({
+  subsets: ['latin', 'latin-ext', 'greek'],
   weight: ['300', '400', '500', '600'],
   variable: '--f-body-loaded',
   display: 'swap',
