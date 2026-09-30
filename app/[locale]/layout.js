@@ -115,12 +115,12 @@ export default function LocaleLayout({ children, params }) {
               <img src="/logo-light.svg" alt="KYDORA Real Estate & Investments" width="400" height="103" />
             </a>
             <nav>
-              <a className="nl" href={`/${locale}#properties`}>{t.nav.properties}</a>
+              <a className="nl" href={`/${locale}/akinita`}>{t.nav.properties}</a>
               <a className="nl" href={`/${locale}#seller`}>{t.nav.selling}</a>
               <a className="nl" href={`/${locale}#buyer`}>{t.nav.buying}</a>
               <a className="nl" href={`/${locale}#buyer`}>{t.nav.investments}</a>
               <a className="nl" href={`/${locale}#developers`}>{t.nav.developers}</a>
-              <a className="btn btn-1 btn-head" href={`/${locale}#contact`}>{t.nav.contact}</a>
+              <a className="btn btn-1 btn-head" href={`/${locale}/epikoinonia`}>{t.nav.contact}</a>
               <span className="lang">
                 <a href="/el" aria-current={locale === 'el' ? 'true' : undefined} hrefLang="el">ΕΛ</a>
                 <a href="/en" aria-current={locale === 'en' ? 'true' : undefined} hrefLang="en">EN</a>

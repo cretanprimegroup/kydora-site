@@ -37,7 +37,7 @@ export default async function Properties({ params }) {
           <p className="lede">{t.listing.lede}</p>
           <p className="lede">{t.listing.support}</p>
           <div className="routes">
-            <a className="btn btn-2" href={`/${locale}#contact`}>{t.listing.cta2}</a>
+            <a className="btn btn-2" href={`/${locale}/epikoinonia`}>{t.listing.cta2}</a>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default async function Properties({ params }) {
                 <div className="aside-note">
                   <h2>{t.listing.lowHeading}</h2>
                   <p className="lede">{t.listing.lowBody}</p>
-                  <a className="btn-3" href={`/${locale}#contact`}>
+                  <a className="btn-3" href={`/${locale}/epikoinonia`}>
                     <span>{t.listing.cta2}</span>
                     <span className="arw" aria-hidden="true">→</span>
                   </a>
@@ -74,7 +74,7 @@ export default async function Properties({ params }) {
               <p className="lede">{t.listing.emptyBody}</p>
               <p className="lede">{t.listing.emptySupport}</p>
               <div className="routes">
-                <a className="btn btn-1" href={`/${locale}#contact`}>{t.listing.cta2}</a>
+                <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.listing.cta2}</a>
               </div>
             </div>
           )}
@@ -94,7 +94,7 @@ export default async function Properties({ params }) {
         <div className="wrap close-in">
           <h2>{t.listing.assistHeading}</h2>
           <p>{t.listing.assistBody}</p>
-          <a className="btn btn-1" href={`/${locale}#contact`}>{t.listing.cta2}</a>
+          <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.listing.cta2}</a>
         </div>
       </div>
     </>

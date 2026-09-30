@@ -421,3 +421,84 @@ footer { padding-block: 44px 52px; }
 @media (max-width: 720px) { .pd-gallery { grid-template-columns: repeat(2, 1fr); } }
 .pd-gallery .shot { aspect-ratio: 3 / 2; }
 .pd-gallery img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ============================================================
+   Φόρμες — Contact Page V1 §4, Property Detail V1 §9.
+   Ήρεμα πεδία, χωρίς αισθητική τραπεζικού widget.
+   ============================================================ */
+
+.contact-grid {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 76px); align-items: start;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+.contact-grid h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+
+.channels .ch { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--rule-soft); }
+.channels h3 {
+  font-family: var(--f-body); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-2);
+}
+.channels .ch p { margin-top: 8px; font-size: 0.98rem; }
+.channels .ch a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+.channels .ch a:hover { border-color: var(--olive); color: var(--olive); }
+.channels .note { margin-top: 10px; }
+.channels > .note { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--rule-soft); }
+
+.form { margin-top: 26px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 22px; }
+@media (max-width: 560px) { .fields { grid-template-columns: 1fr; } }
+.field, .check, .hint { margin: 0; min-width: 0; }
+.field.full, .check.full, .hint.full { grid-column: 1 / -1; }
+
+.field label {
+  display: block; font-family: var(--f-body); font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-2); margin-bottom: 8px;
+}
+.field .opt {
+  text-transform: none; letter-spacing: 0.02em; font-weight: 400; color: var(--stone);
+}
+.field input, .field select, .field textarea {
+  width: 100%; font-family: var(--f-body); font-size: 0.97rem; color: var(--fg);
+  background: #fff; border: 1px solid var(--rule); border-radius: 2px;
+  padding: 12px 14px; transition: border-color 0.18s;
+}
+.field textarea { resize: vertical; line-height: 1.7; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--stone); }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--olive); box-shadow: 0 0 0 3px rgba(63, 70, 54, 0.12);
+}
+.hint { font-size: 0.8rem; color: var(--fg-2); margin-top: -6px; }
+
+.check { display: flex; align-items: flex-start; gap: 11px; margin-top: 4px; }
+.check input { width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--olive); flex: 0 0 auto; }
+.check label { font-size: 0.87rem; color: var(--fg-2); line-height: 1.65; }
+
+.form-foot {
+  margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--rule-soft);
+  display: grid; gap: 16px; justify-items: start;
+}
+.form-foot .privacy { font-size: 0.78rem; color: var(--fg-2); line-height: 1.8; max-width: 62ch; }
+.btn[disabled] { opacity: 0.55; cursor: default; }
+
+.form-err {
+  margin-top: 20px; padding: 12px 16px; border-radius: 2px;
+  border: 1px solid #c2705f; background: #fbf0ec; color: #8d4433;
+  font-size: 0.88rem;
+}
+.form-done {
+  margin-top: 26px; padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--rule-soft); border-left: 2px solid var(--olive);
+  background: var(--surface); border-radius: 2px;
+}
+.form-done p { font-size: 1rem; line-height: 1.75; max-width: 56ch; }
+
+.inquiry { background: var(--surface); border-top: 1px solid var(--rule-soft); }
+.inquiry-in { max-width: 760px; }
+.inquiry .ref {
+  margin-top: 6px; font-family: var(--f-body); font-size: 0.72rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze);
+}
+.inquiry .field input, .inquiry .field select, .inquiry .field textarea { background: #fff; }

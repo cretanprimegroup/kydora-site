@@ -18,6 +18,8 @@
 | `content/copy.js` | Όλα τα κείμενα GR/EN. Πηγή: *KYDORA Website Production Copy V1* (Notion). |
 | `styles/globals.css` | Design tokens και όλο το CSS. Πηγή: *Website High-Fidelity Design Brief V1*. |
 | `lib/notion.js` | Ανάγνωση ακινήτων από τη βάση KYDORA Properties. Read-only. |
+| `app/api/lead/` | Εγγραφή leads στη βάση KYDORA Επαφές & Leads. Ξεχωριστό κλειδί, μόνο insert. |
+| `components/` | Κάρτα ακινήτου και φόρμα επικοινωνίας. |
 | `app/[locale]/` | Οι σελίδες ανά γλώσσα. |
 | `public/` | Λογότυπα και σύμβολα από το KYDORA Brand Pack. |
 
@@ -46,8 +48,10 @@ npm run dev
 
 | Μεταβλητή | Τι είναι |
 |---|---|
-| `NOTION_TOKEN` | Integration token, μόνο ανάγνωση |
+| `NOTION_TOKEN` | Ανάγνωση ακινήτων. Μόνο Read content. |
 | `NOTION_PROPERTIES_DB` | ID της βάσης KYDORA Properties |
+| `NOTION_LEADS_TOKEN` | Εγγραφή leads. **Ξεχωριστό κλειδί, μόνο Insert content.** |
+| `NOTION_LEADS_DB` | ID της βάσης KYDORA Επαφές & Leads |
 | `SITE_URL` | Η διεύθυνση του site |
 | `SITE_PUBLIC` | `true` μόνο μετά το launch |
 
@@ -55,7 +59,8 @@ npm run dev
 
 - [ ] Φωτογραφίες ακινήτων — κάθε `.plate` στον κώδικα είναι θέση φωτογραφίας
 - [ ] Σελίδες Seller / Buyer / Developers
-- [ ] Φόρμες με σύνδεση στο CRM (πηγή + Property ID) — τώρα οι CTA πάνε σε email
+- [ ] Ειδικές φόρμες Seller / Buyer / Investor / Developer (Contact V1 §5) — τώρα όλα περνούν από τη γενική
+- [ ] Η βάση Leads δεν έχει επιλογή «Ιδιοκτήτης / Πωλητής» στο `Τύπος Lead` — τα αιτήματα πώλησης μπαίνουν ως «Άλλο»
 - [ ] Φίλτρα και ταξινόμηση στη σελίδα ακινήτων (Listing & Search V1 §2–3)
 - [ ] Υπολογιστές δόσης και εξόδων αγοράς (Property Detail V1 §8)
 - [ ] Gallery, κάτοψη, παρόμοια ακίνητα (Property Detail V1 §6, §10)

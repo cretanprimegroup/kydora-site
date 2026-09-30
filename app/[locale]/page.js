@@ -92,7 +92,7 @@ export default async function Home({ params }) {
             <p className="body">{t.seller.body}</p>
             <p className="quote">{t.seller.quote}</p>
             <div className="acts">
-              <a className="btn btn-1" href={`/${locale}#contact`}>{t.seller.cta}</a>
+              <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.seller.cta}</a>
             </div>
           </div>
           <div className="plate"><span className="mark" aria-hidden="true" /></div>
@@ -108,8 +108,8 @@ export default async function Home({ params }) {
               <h2>{t.buyer.heading}</h2>
               <p className="body">{t.buyer.body}</p>
               <div className="acts">
-                <a className="btn btn-1" href={`/${locale}#contact`}>{t.buyer.cta1}</a>
-                <a className="btn btn-2" href={`/${locale}#contact`}>{t.buyer.cta2}</a>
+                <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.buyer.cta1}</a>
+                <a className="btn btn-2" href={`/${locale}/epikoinonia`}>{t.buyer.cta2}</a>
               </div>
             </div>
             <div className="plate stone"><span className="mark" aria-hidden="true" /></div>
@@ -125,7 +125,7 @@ export default async function Home({ params }) {
             <h2>{t.developers.heading}</h2>
             <p className="lede">{t.developers.body}</p>
             <div>
-              <a className="btn-3" href={`/${locale}#contact`}>
+              <a className="btn-3" href={`/${locale}/epikoinonia`}>
                 <span>{t.developers.cta}</span>
                 <span className="arw" aria-hidden="true">→</span>
               </a>
@@ -144,7 +144,7 @@ export default async function Home({ params }) {
               <h2>{t.areas.heading}</h2>
               <p className="body">{t.areas.body}</p>
               <div className="acts">
-                <a className="btn-3" href={`/${locale}#contact`}>
+                <a className="btn-3" href={`/${locale}/epikoinonia`}>
                   <span>{t.areas.cta}</span>
                   <span className="arw" aria-hidden="true">→</span>
                 </a>
@@ -159,7 +159,7 @@ export default async function Home({ params }) {
         <div className="wrap close-in">
           <h2>{t.closing.heading}</h2>
           <p>{t.closing.body}</p>
-          <a className="btn btn-1" href={`/${locale}#contact`}>{t.closing.cta}</a>
+          <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.closing.cta}</a>
         </div>
       </div>
     </>

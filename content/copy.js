@@ -162,6 +162,61 @@ export const copy = {
       onRequest: 'Κατόπιν αιτήματος',
       media: 'Κάτοψη και πρόσθετο υλικό διατίθενται όπου έχουν εγκριθεί για δημόσια κοινοποίηση.',
     },
+    // Πηγή: "KYDORA Website Production Copy V1 — Contact Page GR/EN" (16/09/2026).
+    contact: {
+      eyebrow: 'Επικοινωνία',
+      heading: 'Ας ξεκινήσουμε από αυτό που χρειάζεστε.',
+      lede:
+        'Είτε αναζητάτε ακίνητο, είτε θέλετε να πουλήσετε, είτε εξετάζετε επένδυση ή project ανάπτυξης, επιλέξτε τον σωστό τρόπο επικοινωνίας και η KYDORA θα κατευθύνει το αίτημά σας στην κατάλληλη διαδικασία.',
+      channelsHeading: 'Επιλέξτε τον τρόπο που σας εξυπηρετεί',
+      emailLabel: 'Email',
+      phoneLabel: 'Τηλέφωνο',
+      officeLabel: 'Γραφείο και συναντήσεις',
+      officeValue: 'Χανιά, Κρήτη',
+      officeNote:
+        'Προτείνεται ραντεβού για συναντήσεις που απαιτούν χρόνο, αξιολόγηση ακινήτου ή συζήτηση επένδυσης και ανάπτυξης.',
+      responseNote:
+        'Θα προσπαθήσουμε να απαντήσουμε το συντομότερο δυνατό εντός των εργάσιμων ωρών μας. Για επείγον θέμα που αφορά προγραμματισμένη επίσκεψη ή ενεργή συναλλαγή, χρησιμοποιήστε το συμφωνημένο κανάλι επικοινωνίας με τον υπεύθυνο της υπόθεσής σας.',
+    },
+
+    form: {
+      heading: 'Στείλτε μας μήνυμα',
+      name: 'Ονοματεπώνυμο',
+      email: 'Email',
+      phone: 'Τηλέφωνο',
+      contactHint: 'Συμπληρώστε τουλάχιστον ένα από τα δύο.',
+      company: 'Εταιρεία',
+      optional: 'προαιρετικό',
+      reason: 'Θέμα αιτήματος',
+      reasons: [
+        'Αγορά ακινήτου',
+        'Πώληση ακινήτου',
+        'Επένδυση',
+        'Development / συνεργασία',
+        'Γενικό αίτημα',
+        'Media / press',
+        'Άλλο',
+      ],
+      intent: 'Τι θα θέλατε;',
+      intents: ['Πληροφορίες', 'Επίσκεψη'],
+      when: 'Προτιμώμενη ημέρα ή χρονικό παράθυρο',
+      message: 'Μήνυμα',
+      consent:
+        'Συμφωνώ να χρησιμοποιήσει η KYDORA τα στοιχεία μου για να απαντήσει στο αίτημά μου.',
+      privacy:
+        'Χρησιμοποιούμε τα στοιχεία που μας στέλνετε αποκλειστικά για να διαχειριστούμε και να απαντήσουμε στο αίτημά σας. Μην αποστέλλετε ευαίσθητα προσωπικά, τραπεζικά, φορολογικά, νομικά ή τεχνικά έγγραφα μέσω της φόρμας.',
+      submit: 'Αποστολή μηνύματος',
+      submitProperty: 'Αποστολή αιτήματος',
+      sending: 'Αποστολή…',
+      success: 'Ευχαριστούμε. Το μήνυμά σας καταχωρίθηκε και θα δρομολογηθεί στο κατάλληλο KYDORA workflow.',
+      successProperty: (code) =>
+        `Ευχαριστούμε. Το αίτημά σας καταχωρίθηκε για το ακίνητο ${code} και η KYDORA θα επικοινωνήσει μαζί σας για το επόμενο βήμα.`,
+      errRequired: 'Συμπληρώστε τα υποχρεωτικά πεδία.',
+      errContact: 'Χρειαζόμαστε email ή τηλέφωνο για να σας απαντήσουμε.',
+      errConsent: 'Χρειαζόμαστε τη συγκατάθεσή σας για να επικοινωνήσουμε μαζί σας.',
+      errSend:
+        'Δεν μπορέσαμε να στείλουμε το μήνυμα. Δοκιμάστε ξανά ή γράψτε μας στο info@kydora.gr.',
+    },
     footer: {
       office: 'Γραφείο',
       services: 'Υπηρεσίες',
@@ -329,6 +384,59 @@ export const copy = {
         'Send us your details and let us know whether you would like further information or to arrange a viewing.',
       onRequest: 'On request',
       media: 'Floorplans and additional material are shown where approved for public disclosure.',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      heading: 'Start with what you need.',
+      lede:
+        'Whether you are looking for a property, considering a sale, exploring an investment or discussing a development project, choose the most relevant way to contact us and KYDORA will route your request into the appropriate process.',
+      channelsHeading: 'Choose the channel that works for you',
+      emailLabel: 'Email',
+      phoneLabel: 'Phone',
+      officeLabel: 'Office and meetings',
+      officeValue: 'Chania, Crete',
+      officeNote:
+        'Appointments are recommended for discussions requiring property review, investment or development strategy.',
+      responseNote:
+        'We aim to respond as soon as practical during our business hours. For urgent matters relating to a scheduled viewing or active transaction, please use the agreed communication channel with your KYDORA contact.',
+    },
+
+    form: {
+      heading: 'Send us a message',
+      name: 'Full name',
+      email: 'Email',
+      phone: 'Phone',
+      contactHint: 'Please give us at least one of the two.',
+      company: 'Company',
+      optional: 'optional',
+      reason: 'Enquiry type',
+      reasons: [
+        'Buying a property',
+        'Selling a property',
+        'Investment',
+        'Development / partnership',
+        'General enquiry',
+        'Media / press',
+        'Other',
+      ],
+      intent: 'What would you like?',
+      intents: ['Information', 'A viewing'],
+      when: 'Preferred day or time window',
+      message: 'Message',
+      consent: 'I agree that KYDORA may use my details to respond to my enquiry.',
+      privacy:
+        'We use the information you submit solely to manage and respond to your enquiry. Please do not send sensitive personal, banking, tax, legal or technical documents through this form.',
+      submit: 'Send Message',
+      submitProperty: 'Send Request',
+      sending: 'Sending…',
+      success:
+        'Thank you. Your message has been received and will be routed to the appropriate KYDORA workflow.',
+      successProperty: (code) =>
+        `Thank you. Your request has been recorded for property ${code} and KYDORA will contact you regarding the next step.`,
+      errRequired: 'Please complete the required fields.',
+      errContact: 'We need an email or a phone number to reply to you.',
+      errConsent: 'We need your consent before we can contact you.',
+      errSend: 'We could not send your message. Please try again or write to info@kydora.gr.',
     },
     footer: {
       office: 'Office',

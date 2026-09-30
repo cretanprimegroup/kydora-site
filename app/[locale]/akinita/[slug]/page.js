@@ -1,6 +1,7 @@
 import { copy, locales } from '../../../../content/copy';
 import { getPublishedProperties, getPropertyBySlug } from '../../../../lib/notion';
 import { money, area } from '../../../../components/PropertyCard';
+import ContactForm from '../../../../components/ContactForm';
 import { notFound } from 'next/navigation';
 
 // Δομή: KYDORA Website Production Copy V1 — Property Detail Framework GR/EN (13/09/2026).
@@ -150,8 +151,8 @@ export default async function PropertyDetail({ params }) {
           </div>
 
           <div className="routes">
-            <a className="btn btn-1" href={`/${locale}/akinita/${p.slug}#inquiry`}>{t.detail.cta1}</a>
-            <a className="btn btn-2" href={`/${locale}/akinita/${p.slug}#inquiry`}>{t.detail.cta2}</a>
+            <a className="btn btn-1" href="#inquiry">{t.detail.cta1}</a>
+            <a className="btn btn-2" href="#inquiry">{t.detail.cta2}</a>
           </div>
 
           <p className="micro">{t.detail.microcopy}</p>
@@ -227,7 +228,7 @@ export default async function PropertyDetail({ params }) {
             <h2>{t.detail.advisoryHeading}</h2>
             <p className="lede">{t.detail.advisoryBody}</p>
             <div className="routes">
-              <a className="btn btn-1" href={`/${locale}/akinita/${p.slug}#inquiry`}>
+              <a className="btn btn-1" href="#inquiry">
                 {t.detail.advisoryCta}
               </a>
             </div>
@@ -235,16 +236,16 @@ export default async function PropertyDetail({ params }) {
         </section>
       </div>
 
-      <div className="close" id="inquiry">
-        <div className="wrap close-in">
-          <h2>{t.detail.inquiryHeading}</h2>
-          <p>{t.detail.inquiryIntro}</p>
-          <p className="ref">
-            {t.detail.f.code}: {p.code || '—'}
-          </p>
-          <a className="btn btn-1" href="mailto:info@kydora.gr">info@kydora.gr</a>
+      <section id="inquiry" className="inquiry">
+        <div className="wrap inquiry-in">
+          <div className="sec-top">
+            <h2>{t.detail.inquiryHeading}</h2>
+            <p className="lede">{t.detail.inquiryIntro}</p>
+            {p.code ? <p className="ref">{t.detail.f.code}: {p.code}</p> : null}
+          </div>
+          <ContactForm t={t} locale={locale} mode="property" propertyCode={p.code || ''} />
         </div>
-      </div>
+      </section>
     </>
   );
 }
