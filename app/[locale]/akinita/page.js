@@ -3,7 +3,7 @@ import { getPublishedProperties } from '../../../lib/notion';
 import PropertyCard from '../../../components/PropertyCard';
 import { notFound } from 'next/navigation';
 
-export const revalidate = 600;
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

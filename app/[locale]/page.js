@@ -3,7 +3,7 @@ import { getPublishedProperties } from '../../lib/notion';
 import PropertyCard from '../../components/PropertyCard';
 
 // Τα ακίνητα ξαναδιαβάζονται από το Notion κάθε 10 λεπτά.
-export const revalidate = 600;
+export const revalidate = 300;
 
 export default async function Home({ params }) {
   const { locale } = params;

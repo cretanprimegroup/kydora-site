@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 // Δομή: KYDORA Website Production Copy V1 — Property Detail Framework GR/EN (13/09/2026).
 // Εμφανίζονται ΜΟΝΟ πεδία του εγκεκριμένου public layer. Στοιχεία ιδιοκτήτη, ακριβής
 // διεύθυνση, εσωτερικά scores και όροι ανάθεσης δεν φτάνουν ποτέ εδώ (§12).
-export const revalidate = 600;
+export const revalidate = 300;
 
 export async function generateStaticParams() {
   const all = await getPublishedProperties();
@@ -162,7 +162,7 @@ export default async function PropertyDetail({ params }) {
         <div className="plate pd-hero">
           {p.image ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.image} alt={p.title || ''} />
+            <img src={p.image} alt={p.title || ''} fetchPriority="high" />
           ) : (
             <>
               <span className="mark" aria-hidden="true" />
@@ -171,6 +171,19 @@ export default async function PropertyDetail({ params }) {
           )}
         </div>
       </div>
+
+      {p.gallery.length > 0 ? (
+        <div className="wrap">
+          <div className="pd-gallery">
+            {p.gallery.map((g) => (
+              <div className="plate shot" key={g.url}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={g.url} alt={g.name || p.title || ''} loading="lazy" decoding="async" />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
 
       <section>
         <div className="wrap pd-grid">
