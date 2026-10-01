@@ -502,3 +502,8 @@ footer { padding-block: 44px 52px; }
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze);
 }
 .inquiry .field input, .inquiry .field select, .inquiry .field textarea { background: #fff; }
+
+.channels .lbl {
+  display: inline-block; min-width: 72px; font-family: var(--f-body);
+  font-size: 0.78rem; color: var(--fg-2);
+}

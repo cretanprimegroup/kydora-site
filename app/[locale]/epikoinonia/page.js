@@ -58,7 +58,14 @@ export default function Contact({ params }) {
 
             <div className="ch">
               <h3>{t.contact.phoneLabel}</h3>
-              <p><a href="tel:+302821821705">+30 28218 21705</a></p>
+              <p>
+                <span className="lbl">{t.contact.landlineLabel}</span>{' '}
+                <a href="tel:+302821821705">+30 28218 21705</a>
+              </p>
+              <p>
+                <span className="lbl">{t.contact.mobileLabel}</span>{' '}
+                <a href="tel:+306974882014">+30 697 488 2014</a>
+              </p>
             </div>
 
             <div className="ch">

@@ -170,7 +170,9 @@ export const copy = {
         'Είτε αναζητάτε ακίνητο, είτε θέλετε να πουλήσετε, είτε εξετάζετε επένδυση ή project ανάπτυξης, επιλέξτε τον σωστό τρόπο επικοινωνίας και η KYDORA θα κατευθύνει το αίτημά σας στην κατάλληλη διαδικασία.',
       channelsHeading: 'Επιλέξτε τον τρόπο που σας εξυπηρετεί',
       emailLabel: 'Email',
-      phoneLabel: 'Τηλέφωνο',
+      phoneLabel: 'Τηλέφωνα',
+      landlineLabel: 'Σταθερό',
+      mobileLabel: 'Κινητό',
       officeLabel: 'Γραφείο και συναντήσεις',
       officeValue: 'Χανιά, Κρήτη',
       officeNote:
@@ -392,7 +394,9 @@ export const copy = {
         'Whether you are looking for a property, considering a sale, exploring an investment or discussing a development project, choose the most relevant way to contact us and KYDORA will route your request into the appropriate process.',
       channelsHeading: 'Choose the channel that works for you',
       emailLabel: 'Email',
-      phoneLabel: 'Phone',
+      phoneLabel: 'Phones',
+      landlineLabel: 'Landline',
+      mobileLabel: 'Mobile',
       officeLabel: 'Office and meetings',
       officeValue: 'Chania, Crete',
       officeNote:
