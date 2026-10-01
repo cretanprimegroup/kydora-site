@@ -19,6 +19,7 @@
 | `styles/globals.css` | Design tokens και όλο το CSS. Πηγή: *Website High-Fidelity Design Brief V1*. |
 | `lib/notion.js` | Ανάγνωση ακινήτων από τη βάση KYDORA Properties. Read-only. |
 | `app/api/lead/` | Εγγραφή leads στη βάση KYDORA Επαφές & Leads. Ξεχωριστό κλειδί, μόνο insert. |
+| `lib/notify.js` | Email ειδοποίησης για κάθε νέο lead. Δεν μπλοκάρει ποτέ την καταχώριση. |
 | `components/` | Κάρτα ακινήτου και φόρμα επικοινωνίας. |
 | `app/[locale]/` | Οι σελίδες ανά γλώσσα. |
 | `public/` | Λογότυπα και σύμβολα από το KYDORA Brand Pack. |
@@ -52,6 +53,9 @@ npm run dev
 | `NOTION_PROPERTIES_DB` | ID της βάσης KYDORA Properties |
 | `NOTION_LEADS_TOKEN` | Εγγραφή leads. **Ξεχωριστό κλειδί, μόνο Insert content.** |
 | `NOTION_LEADS_DB` | ID της βάσης KYDORA Επαφές & Leads |
+| `RESEND_API_KEY` | Αποστολή email ειδοποίησης. Χωρίς αυτό, η φόρμα δουλεύει σιωπηλά. |
+| `LEAD_NOTIFY_TO` | Πού πάει η ειδοποίηση. Πολλές διευθύνσεις με κόμμα. |
+| `LEAD_NOTIFY_FROM` | Αποστολέας. Προαιρετικό μέχρι να επαληθευτεί το kydora.gr. |
 | `SITE_URL` | Η διεύθυνση του site |
 | `SITE_PUBLIC` | `true` μόνο μετά το launch |
 

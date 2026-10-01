@@ -1,4 +1,5 @@
 import { Client } from '@notionhq/client';
+import { notifyNewLead } from '../../../lib/notify';
 
 // Γράφει ένα lead στη βάση "KYDORA Επαφές & Leads".
 //
@@ -125,13 +126,22 @@ export async function POST(request) {
     });
   }
 
+  let page;
   try {
     const notion = new Client({ auth: TOKEN });
-    await notion.pages.create({ parent: { database_id: DB }, properties, children });
-    return Response.json({ ok: true });
+    page = await notion.pages.create({ parent: { database_id: DB }, properties, children });
   } catch (err) {
     // Ποτέ δεν επιστρέφουμε λεπτομέρειες του Notion στον επισκέπτη.
     console.error('[lead] αποτυχία εγγραφής:', err.code, err.message);
     return Response.json({ ok: false }, { status: 502 });
   }
+
+  // Το lead έχει καταχωριθεί. Η ειδοποίηση είναι bonus — αν αποτύχει, ο
+  // επισκέπτης βλέπει κανονικά επιβεβαίωση και τα στοιχεία δεν χάνονται.
+  await notifyNewLead(
+    { name, email, phone, message, company, when, reason, intent, code, pageUrl, locale },
+    page?.url,
+  );
+
+  return Response.json({ ok: true });
 }
