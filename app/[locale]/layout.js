@@ -136,8 +136,11 @@ export default function LocaleLayout({ children, params }) {
             <div className="foot">
               <div>
                 <h4>{t.footer.office}</h4>
-                <p className="sel">+30 2821 821 705</p>
-                <p className="sel">info@kydora.gr</p>
+                {/* Μορφή αριθμών όπως στο Contact Page V1 στο Notion. Σύνδεσμοι
+                    tel:/mailto: ώστε στο κινητό να καλεί με ένα άγγιγμα. */}
+                <p><a href="tel:+302821821705">+30 28218 21705</a></p>
+                <p><a href="tel:+306974882014">+30 697 488 2014</a></p>
+                <p><a href="mailto:info@kydora.gr">info@kydora.gr</a></p>
                 <p>{t.footer.address}</p>
               </div>
               <div>

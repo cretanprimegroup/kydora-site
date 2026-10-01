@@ -243,7 +243,7 @@ export default async function PropertyDetail({ params }) {
             <p className="lede">{t.detail.inquiryIntro}</p>
             {p.code ? <p className="ref">{t.detail.f.code}: {p.code}</p> : null}
           </div>
-          <ContactForm t={t} locale={locale} mode="property" propertyCode={p.code || ''} />
+          <ContactForm f={t.form} locale={locale} mode="property" propertyCode={p.code || ''} />
         </div>
       </section>
     </>

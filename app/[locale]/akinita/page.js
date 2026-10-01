@@ -47,7 +47,7 @@ export default async function Properties({ params }) {
           {properties.length > 0 ? (
             <>
               <div className="res-top">
-                <p className="count">{t.listing.count(properties.length)}</p>
+                <p className="count">{properties.length === 1 ? t.listing.countOne : t.listing.countMany.replace('{n}', String(properties.length))}</p>
                 <p className="note">{t.listing.note}</p>
               </div>
 

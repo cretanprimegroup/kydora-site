@@ -302,6 +302,7 @@ footer { padding-block: 44px 52px; }
 .foot p, .foot a { font-size: 0.82rem; color: var(--fg-2); text-decoration: none; line-height: 1.9; }
 .foot a:hover { color: var(--olive); }
 .foot .sel { user-select: all; }
+.foot a[href^="tel"], .foot a[href^="mailto"] { user-select: all; }
 .foot-base {
   margin-top: 40px;
   padding-top: 22px;

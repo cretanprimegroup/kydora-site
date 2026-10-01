@@ -8,8 +8,7 @@ import { useState } from 'react';
 //
 // Κάθε υποβολή κουβαλά τη σελίδα, τη γλώσσα και τον κωδικό ακινήτου, ώστε να
 // ξέρουμε από πού ήρθε το lead. Δεν στέλνεται τίποτα πριν δοθεί συγκατάθεση.
-export default function ContactForm({ t, locale, mode = 'general', propertyCode = '' }) {
-  const f = t.form;
+export default function ContactForm({ f, locale, mode = 'general', propertyCode = '' }) {
   const [state, setState] = useState('idle'); // idle | sending | done | error
   const [error, setError] = useState('');
   const [startedAt] = useState(() => Date.now());
@@ -75,7 +74,7 @@ export default function ContactForm({ t, locale, mode = 'general', propertyCode 
       <div className="form-done" role="status">
         <p>
           {mode === 'property' && propertyCode
-            ? f.successProperty(propertyCode)
+            ? f.successProperty.replace('{code}', propertyCode)
             : f.success}
         </p>
       </div>

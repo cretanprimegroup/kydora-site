@@ -45,7 +45,7 @@ export default function Contact({ params }) {
         <div className="wrap contact-grid">
           <div>
             <h2>{t.form.heading}</h2>
-            <ContactForm t={t} locale={locale} mode="general" />
+            <ContactForm f={t.form} locale={locale} mode="general" />
           </div>
 
           <aside className="channels">

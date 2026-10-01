@@ -106,7 +106,8 @@ export const copy = {
       support:
         'Η KYDORA παρουσιάζει επιλεγμένα ακίνητα με έμφαση στην ποιότητα της πληροφορίας, την παρουσίαση και το σωστό πλαίσιο για κάθε επιλογή.',
       cta2: 'Πείτε μας τι ψάχνετε',
-      count: (n) => `${n} ${n === 1 ? 'ακίνητο' : 'ακίνητα'} διαθέσιμα δημόσια`,
+      countOne: '1 ακίνητο διαθέσιμο δημόσια',
+      countMany: '{n} ακίνητα διαθέσιμα δημόσια',
       note: 'Τα αποτελέσματα εμφανίζουν μόνο ακίνητα εγκεκριμένα για δημόσια προβολή.',
       curatedHeading: 'Δεν βλέπετε απλώς έναν κατάλογο ακινήτων.',
       curatedBody:
@@ -211,8 +212,8 @@ export const copy = {
       submitProperty: 'Αποστολή αιτήματος',
       sending: 'Αποστολή…',
       success: 'Ευχαριστούμε. Το μήνυμά σας καταχωρίθηκε και θα δρομολογηθεί στο κατάλληλο KYDORA workflow.',
-      successProperty: (code) =>
-        `Ευχαριστούμε. Το αίτημά σας καταχωρίθηκε για το ακίνητο ${code} και η KYDORA θα επικοινωνήσει μαζί σας για το επόμενο βήμα.`,
+      successProperty:
+        'Ευχαριστούμε. Το αίτημά σας καταχωρίθηκε για το ακίνητο {code} και η KYDORA θα επικοινωνήσει μαζί σας για το επόμενο βήμα.',
       errRequired: 'Συμπληρώστε τα υποχρεωτικά πεδία.',
       errContact: 'Χρειαζόμαστε email ή τηλέφωνο για να σας απαντήσουμε.',
       errConsent: 'Χρειαζόμαστε τη συγκατάθεσή σας για να επικοινωνήσουμε μαζί σας.',
@@ -332,7 +333,8 @@ export const copy = {
       support:
         'KYDORA presents selected properties with a focus on information quality, presentation and relevant context.',
       cta2: 'Tell Us What You’re Looking For',
-      count: (n) => `${n} ${n === 1 ? 'property' : 'properties'} publicly available`,
+      countOne: '1 property publicly available',
+      countMany: '{n} properties publicly available',
       note: 'Results include only properties approved for public presentation.',
       curatedHeading: 'You are not simply browsing inventory.',
       curatedBody:
@@ -435,8 +437,8 @@ export const copy = {
       sending: 'Sending…',
       success:
         'Thank you. Your message has been received and will be routed to the appropriate KYDORA workflow.',
-      successProperty: (code) =>
-        `Thank you. Your request has been recorded for property ${code} and KYDORA will contact you regarding the next step.`,
+      successProperty:
+        'Thank you. Your request has been recorded for property {code} and KYDORA will contact you regarding the next step.',
       errRequired: 'Please complete the required fields.',
       errContact: 'We need an email or a phone number to reply to you.',
       errConsent: 'We need your consent before we can contact you.',
