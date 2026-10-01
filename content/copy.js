@@ -17,7 +17,9 @@ export const copy = {
       buying: 'Αγορά',
       investments: 'Επενδύσεις',
       developers: 'Developers',
+      guides: 'Οδηγοί',
       contact: 'Επικοινωνία',
+      menu: 'Μενού',
     },
     hero: {
       eyebrow: 'KYDORA — Real Estate & Investments',
@@ -255,7 +257,9 @@ export const copy = {
       buying: 'Buying',
       investments: 'Investments',
       developers: 'Developers',
+      guides: 'Guides',
       contact: 'Contact',
+      menu: 'Menu',
     },
     hero: {
       eyebrow: 'KYDORA — Real Estate & Investments',

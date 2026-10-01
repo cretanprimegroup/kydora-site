@@ -100,6 +100,16 @@ export default function LocaleLayout({ children, params }) {
   const t = copy[locale];
   const other = locale === 'el' ? 'en' : 'el';
 
+  // Ένας κατάλογος για τα δύο μενού, ώστε να μη διαφωνήσουν ποτέ μεταξύ τους.
+  const nav = [
+    { href: `/${locale}/akinita`, label: t.nav.properties },
+    { href: `/${locale}#seller`, label: t.nav.selling },
+    { href: `/${locale}#buyer`, label: t.nav.buying },
+    { href: `/${locale}#buyer`, label: t.nav.investments },
+    { href: `/${locale}#developers`, label: t.nav.developers },
+    { href: `/${locale}/odigoi`, label: t.nav.guides },
+  ];
+
   return (
     <html lang={locale} className={`${display.variable} ${body.variable}`}>
       <body>
@@ -115,16 +125,29 @@ export default function LocaleLayout({ children, params }) {
               <img src="/logo-light.svg" alt="KYDORA Real Estate & Investments" width="400" height="103" />
             </a>
             <nav>
-              <a className="nl" href={`/${locale}/akinita`}>{t.nav.properties}</a>
-              <a className="nl" href={`/${locale}#seller`}>{t.nav.selling}</a>
-              <a className="nl" href={`/${locale}#buyer`}>{t.nav.buying}</a>
-              <a className="nl" href={`/${locale}#buyer`}>{t.nav.investments}</a>
-              <a className="nl" href={`/${locale}#developers`}>{t.nav.developers}</a>
+              {nav.map((item) => (
+                <a className="nl" key={item.href} href={item.href}>{item.label}</a>
+              ))}
               <a className="btn btn-1 btn-head" href={`/${locale}/epikoinonia`}>{t.nav.contact}</a>
               <span className="lang">
                 <a href="/el" aria-current={locale === 'el' ? 'true' : undefined} hrefLang="el">ΕΛ</a>
                 <a href="/en" aria-current={locale === 'en' ? 'true' : undefined} hrefLang="en">EN</a>
               </span>
+
+              {/* Μενού κινητού. Χωρίς JavaScript — το <details> ανοίγει μόνο του,
+                  δουλεύει με πληκτρολόγιο και δεν προσθέτει client component. */}
+              <details className="mnav">
+                <summary aria-label={t.nav.menu}>
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </summary>
+                <div className="mnav-panel">
+                  {nav.map((item) => (
+                    <a key={item.href} href={item.href}>{item.label}</a>
+                  ))}
+                  <a className="mnav-cta" href={`/${locale}/epikoinonia`}>{t.nav.contact}</a>
+                </div>
+              </details>
             </nav>
           </div>
         </header>

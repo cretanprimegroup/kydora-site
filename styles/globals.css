@@ -564,3 +564,46 @@ footer { padding-block: 44px 52px; }
 .close .routes { margin-top: 10px; }
 .btn-light { background: transparent; color: var(--ivory); border-color: rgba(242, 239, 230, 0.4); }
 .btn-light:hover { border-color: var(--ivory); }
+
+/* ============================================================
+   Μενού κινητού. Μέχρι τώρα κάτω από τα 1060px δεν υπήρχε καμία
+   πλοήγηση — ο επισκέπτης έβλεπε μόνο το λογότυπο. Σε site ακινήτων,
+   όπου η πλειοψηφία μπαίνει από κινητό, αυτό ήταν αδιέξοδο.
+   Υλοποίηση με <details>: χωρίς JavaScript, με πληκτρολόγιο.
+   ============================================================ */
+
+.mnav { display: none; position: relative; flex: 0 0 auto; }
+@media (max-width: 1060px) { .mnav { display: block; } }
+
+.mnav summary {
+  list-style: none; cursor: pointer; width: 42px; height: 42px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; border: 1px solid var(--rule); border-radius: 2px; background: transparent;
+}
+.mnav summary::-webkit-details-marker { display: none; }
+.mnav summary span {
+  display: block; width: 18px; height: 1px; background: var(--fg); transition: transform 0.2s;
+}
+.mnav[open] summary span:first-child { transform: translateY(3.5px) rotate(45deg); }
+.mnav[open] summary span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+.mnav summary:focus-visible { outline: 2px solid var(--olive); outline-offset: 3px; }
+
+.mnav-panel {
+  position: absolute; right: 0; top: calc(100% + 12px); z-index: 40;
+  min-width: 232px; display: grid;
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 3px;
+  box-shadow: 0 18px 44px rgba(30, 31, 31, 0.13);
+  padding: 8px;
+}
+.mnav-panel a {
+  padding: 13px 14px; text-decoration: none; border-radius: 2px;
+  font-family: var(--f-body); font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg);
+}
+.mnav-panel a:hover { background: var(--surface); color: var(--olive); }
+.mnav-cta {
+  margin-top: 6px; background: var(--olive); color: var(--ivory) !important; text-align: center;
+}
+.mnav-cta:hover { background: var(--olive-hover); color: var(--ivory) !important; }
+
+@media (max-width: 640px) { .mnav-panel { min-width: min(260px, calc(100vw - 40px)); } }
