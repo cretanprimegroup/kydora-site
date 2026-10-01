@@ -12,12 +12,14 @@ const DB = process.env.NOTION_LEADS_DB;
 
 const MAX = { name: 120, email: 200, phone: 40, company: 120, message: 4000, when: 120 };
 
-// Θέμα αιτήματος -> Τύπος Lead. Η βάση δεν έχει επιλογή για ιδιοκτήτη/πωλητή,
-// οπότε ό,τι δεν είναι αγοραστής ή επενδυτής μπαίνει ως "Άλλο" και το πραγματικό
-// θέμα καταγράφεται στη Λεπτομέρεια Πηγής και στο σώμα της σελίδας.
+// Θέμα αιτήματος -> Τύπος Lead. Ό,τι δεν αντιστοιχίζεται εδώ (development,
+// συνεργασίες, media, γενικά) μπαίνει ως "Άλλο", και το πραγματικό θέμα
+// καταγράφεται πάντα στη Λεπτομέρεια Πηγής και στο σώμα της σελίδας.
 const LEAD_TYPE = {
   'Αγορά ακινήτου': 'Αγοραστής',
   'Buying a property': 'Αγοραστής',
+  'Πώληση ακινήτου': 'Ιδιοκτήτης / Πωλητής',
+  'Selling a property': 'Ιδιοκτήτης / Πωλητής',
   Επένδυση: 'Επενδυτής',
   Investment: 'Επενδυτής',
 };
@@ -91,7 +93,8 @@ export async function POST(request) {
   if (phone) properties.Phone = { phone_number: phone };
   if (code) properties['Campaign / Listing Reference'] = txt(code);
 
-  const leadType = LEAD_TYPE[reason];
+  // Αίτημα από σελίδα ακινήτου = ενδιαφερόμενος αγοραστής. Αλλιώς κρίνει το θέμα.
+  const leadType = LEAD_TYPE[reason] || (code ? 'Αγοραστής' : null);
   if (leadType) properties['Τύπος Lead'] = { select: { name: leadType } };
   else if (reason || intent) properties['Τύπος Lead'] = { select: { name: 'Άλλο' } };
 
