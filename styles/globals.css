@@ -508,3 +508,59 @@ footer { padding-block: 44px 52px; }
   display: inline-block; min-width: 72px; font-family: var(--f-body);
   font-size: 0.78rem; color: var(--fg-2);
 }
+
+/* ============================================================
+   Οδηγοί — editorial άρθρο, μία στήλη, μεγάλο διάστιχο.
+   ============================================================ */
+
+.g-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.g-list li { border-top: 1px solid var(--rule-soft); }
+.g-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
+.g-list a { display: block; text-decoration: none; padding-block: clamp(28px, 3.4vw, 40px); }
+.g-list h2 { font-size: clamp(1.35rem, 2.6vw, 1.85rem); max-width: 26ch; }
+.g-list a:hover h2 { color: var(--olive); }
+.g-list p { margin-top: 12px; color: var(--fg-2); max-width: 62ch; line-height: 1.75; }
+.g-list .btn-3 { margin-top: 18px; }
+
+.guide { max-width: 680px; padding-block: clamp(32px, 4vw, 56px) clamp(56px, 7vw, 88px); }
+.guide .pd-back { margin-bottom: 28px; }
+.guide h1 {
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem); margin-top: 14px; line-height: 1.18;
+}
+.g-date {
+  margin-top: 16px; font-family: var(--f-body); font-size: 0.74rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone);
+}
+.g-lede {
+  margin-top: 22px; font-size: clamp(1.02rem, 1.4vw, 1.14rem);
+  line-height: 1.78; color: var(--fg); max-width: none;
+}
+.g-lede:first-of-type { margin-top: 28px; }
+
+.g-sec { margin-top: clamp(40px, 5vw, 64px); }
+.g-sec h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+.g-sec p { margin-top: 18px; color: var(--fg-2); line-height: 1.82; }
+
+.g-defs { margin: 22px 0 0; display: grid; gap: 20px; }
+.g-defs dt { font-weight: 600; color: var(--fg); }
+.g-defs dd { margin: 6px 0 0; color: var(--fg-2); line-height: 1.82; }
+
+.g-ol { margin: 20px 0 0; padding-left: 22px; display: grid; gap: 14px; }
+.g-ol li { color: var(--fg-2); line-height: 1.82; padding-left: 6px; }
+.g-ol li::marker { color: var(--bronze); font-variant-numeric: tabular-nums; }
+.g-ol strong { color: var(--fg); }
+
+.g-note {
+  margin-top: clamp(44px, 5.5vw, 68px); padding: clamp(24px, 3vw, 32px);
+  background: var(--surface); border: 1px solid var(--rule-soft);
+  border-left: 2px solid var(--bronze); border-radius: 2px;
+}
+.g-note h2 {
+  font-family: var(--f-body); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg);
+}
+.g-note p { margin-top: 14px; font-size: 0.92rem; color: var(--fg-2); line-height: 1.82; }
+
+.close .routes { margin-top: 10px; }
+.btn-light { background: transparent; color: var(--ivory); border-color: rgba(242, 239, 230, 0.4); }
+.btn-light:hover { border-color: var(--ivory); }

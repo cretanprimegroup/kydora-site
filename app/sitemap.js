@@ -1,4 +1,5 @@
 import { locales } from '../content/copy';
+import { guides } from '../content/guides';
 import { getPublishedProperties } from '../lib/notion';
 
 // Sitemap μόνο όταν το site είναι δημόσιο. Πριν το launch δεν δίνουμε χάρτη
@@ -15,6 +16,9 @@ export default async function sitemap() {
   const pages = [
     { path: '', priority: 1 },
     { path: '/akinita', priority: 0.9 },
+    { path: '/epikoinonia', priority: 0.7 },
+    { path: '/odigoi', priority: 0.7 },
+    ...guides.map((g) => ({ path: `/odigoi/${g.slug}`, priority: 0.8 })),
   ];
 
   const entries = locales.flatMap((locale) =>

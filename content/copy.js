@@ -220,6 +220,16 @@ export const copy = {
       errSend:
         'Δεν μπορέσαμε να στείλουμε το μήνυμα. Δοκιμάστε ξανά ή γράψτε μας στο info@kydora.gr.',
     },
+    guides: {
+      eyebrow: 'Οδηγοί',
+      heading: 'Τι χρειάζεται να ξέρετε πριν αποφασίσετε.',
+      lede:
+        'Σύντομοι, πραγματικοί οδηγοί για όσα ρωτούν ιδιοκτήτες και αγοραστές στην Κρήτη. Γραμμένοι από τη δουλειά που κάνουμε, όχι από γενικές πηγές.',
+      read: 'Διαβάστε τον οδηγό',
+      back: 'Όλοι οι οδηγοί',
+      ctaHeading: 'Έχετε ένα συγκεκριμένο ερώτημα;',
+      footerLink: 'Οδηγοί',
+    },
     footer: {
       office: 'Γραφείο',
       services: 'Υπηρεσίες',
@@ -443,6 +453,16 @@ export const copy = {
       errContact: 'We need an email or a phone number to reply to you.',
       errConsent: 'We need your consent before we can contact you.',
       errSend: 'We could not send your message. Please try again or write to info@kydora.gr.',
+    },
+    guides: {
+      eyebrow: 'Guides',
+      heading: 'What you need to know before you decide.',
+      lede:
+        'Short, factual guides on the questions owners and buyers in Crete actually ask. Written from the work we do, not from general sources.',
+      read: 'Read the guide',
+      back: 'All guides',
+      ctaHeading: 'Have a specific question?',
+      footerLink: 'Guides',
     },
     footer: {
       office: 'Office',

@@ -149,6 +149,7 @@ export default function LocaleLayout({ children, params }) {
                 <p><a href={`/${locale}#buyer`}>{t.nav.buying}</a></p>
                 <p><a href={`/${locale}#buyer`}>{t.nav.investments}</a></p>
                 <p><a href={`/${locale}#developers`}>{t.nav.developers}</a></p>
+                <p><a href={`/${locale}/odigoi`}>{t.guides.footerLink}</a></p>
               </div>
               <div>
                 <h4>{t.footer.company}</h4>
