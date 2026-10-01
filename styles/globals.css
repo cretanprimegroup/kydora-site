@@ -531,6 +531,16 @@ footer { padding-block: 44px 52px; }
   margin-top: 16px; font-family: var(--f-body); font-size: 0.74rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone);
 }
+/* Σήμα προσχεδίου. Φαίνεται μόνο σε κλειστό site — στο launch ο οδηγός
+   φεύγει μόνος του, άρα το σήμα δεν εμφανίζεται ποτέ σε επισκέπτη. */
+.g-draft {
+  display: inline-block; margin-top: 14px; padding: 5px 11px;
+  border: 1px solid #c9b68a; border-radius: 2px; background: #fbf4e4;
+  font-family: var(--f-body); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #8d6b2f;
+}
+.g-list .g-draft { margin-top: 0; margin-bottom: 14px; }
+
 .g-lede {
   margin-top: 22px; font-size: clamp(1.02rem, 1.4vw, 1.14rem);
   line-height: 1.78; color: var(--fg); max-width: none;

@@ -14,6 +14,8 @@ export function generateMetadata({ params }) {
   return {
     title: c.title,
     description: c.description,
+    // Προσχέδιο = ποτέ σε μηχανή αναζήτησης, ανεξάρτητα από το SITE_PUBLIC.
+    ...(g.draft ? { robots: { index: false, follow: false } } : null),
     alternates: {
       canonical: `/${params.locale}/odigoi/${g.slug}`,
       languages: {
@@ -80,6 +82,7 @@ export default function Guide({ params }) {
           </a>
 
           <p className="eyebrow">{t.guides.eyebrow}</p>
+          {g.draft ? <p className="g-draft">{t.guides.draftBadge}</p> : null}
           <h1>{c.title}</h1>
           <p className="g-date">{date}</p>
 

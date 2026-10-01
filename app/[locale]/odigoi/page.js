@@ -42,6 +42,7 @@ export default function Guides({ params }) {
               return (
                 <li key={g.slug}>
                   <a href={`/${locale}/odigoi/${g.slug}`}>
+                    {g.draft ? <span className="g-draft">{t.guides.draftBadge}</span> : null}
                     <h2>{c.title}</h2>
                     <p>{c.description}</p>
                     <span className="btn-3">

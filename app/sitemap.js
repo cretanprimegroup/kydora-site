@@ -18,7 +18,8 @@ export default async function sitemap() {
     { path: '/akinita', priority: 0.9 },
     { path: '/epikoinonia', priority: 0.7 },
     { path: '/odigoi', priority: 0.7 },
-    ...guides.map((g) => ({ path: `/odigoi/${g.slug}`, priority: 0.8 })),
+    // Τα προσχέδια δεν μπαίνουν ποτέ σε sitemap, ούτε σε κλειστό site.
+    ...guides.filter((g) => !g.draft).map((g) => ({ path: `/odigoi/${g.slug}`, priority: 0.8 })),
   ];
 
   const entries = locales.flatMap((locale) =>

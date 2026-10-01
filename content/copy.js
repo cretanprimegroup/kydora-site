@@ -231,6 +231,8 @@ export const copy = {
       back: 'Όλοι οι οδηγοί',
       ctaHeading: 'Έχετε ένα συγκεκριμένο ερώτημα;',
       footerLink: 'Οδηγοί',
+      // Φαίνεται μόνο σε κλειστό site, μόνο σε οδηγό με draft: true.
+      draftBadge: 'Προσχέδιο — εκκρεμεί νομικός έλεγχος',
     },
     footer: {
       office: 'Γραφείο',
@@ -467,6 +469,7 @@ export const copy = {
       back: 'All guides',
       ctaHeading: 'Have a specific question?',
       footerLink: 'Guides',
+      draftBadge: 'Draft — pending legal review',
     },
     footer: {
       office: 'Office',
