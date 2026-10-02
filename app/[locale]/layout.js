@@ -1,5 +1,7 @@
 import { EB_Garamond, Noto_Sans } from 'next/font/google';
 import { copy, locales } from '../../content/copy';
+import { legalDocs } from '../../content/legal';
+import CookieConsent from '../../components/CookieConsent';
 import { notFound } from 'next/navigation';
 
 // ΓΡΑΜΜΑΤΟΣΕΙΡΕΣ SITE — εγκεκριμένο 30/09/2026.
@@ -181,12 +183,29 @@ export default function LocaleLayout({ children, params }) {
                 <p><a href={`/${other}`} hrefLang={other}>{other === 'en' ? 'English' : 'Ελληνικά'}</a></p>
               </div>
             </div>
+            <div className="foot-legal">
+              {legalDocs.map((d) => (
+                <a key={d.slug} href={`/${locale}/${d.slug}`}>{d[locale].title}</a>
+              ))}
+              {/* Το data-attribute το πιάνει το CookieConsent με delegation,
+                  ώστε το υποσέλιδο να μένει server component. Εμφανίζεται
+                  μόνο όταν υπάρχει πράγματι επιλογή να ρυθμιστεί — χωρίς
+                  analytics δεν υπάρχουν cookies, και ένα κουμπί που δεν κάνει
+                  τίποτα είναι χειρότερο από κανένα κουμπί. */}
+              {process.env.NEXT_PUBLIC_GA_ID ? (
+                <button type="button" data-cookie-settings>{t.cookies.manage}</button>
+              ) : null}
+            </div>
             <div className="foot-base">
               <small>{t.footer.ids}</small>
               <span className="tag">{t.footer.tagline}</span>
             </div>
           </div>
         </footer>
+
+        {/* Δεν εμφανίζεται καθόλου όσο λείπει το NEXT_PUBLIC_GA_ID — χωρίς
+            analytics δεν υπάρχει μη απαραίτητο cookie, άρα ούτε banner. */}
+        <CookieConsent c={t.cookies} locale={locale} />
       </body>
     </html>
   );

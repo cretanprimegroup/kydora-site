@@ -1,5 +1,6 @@
 import { locales } from '../content/copy';
 import { guides } from '../content/guides';
+import { legalSlugs } from '../content/legal';
 import { getPublishedProperties } from '../lib/notion';
 
 // Sitemap μόνο όταν το site είναι δημόσιο. Πριν το launch δεν δίνουμε χάρτη
@@ -20,6 +21,9 @@ export default async function sitemap() {
     { path: '/odigoi', priority: 0.7 },
     // Τα προσχέδια δεν μπαίνουν ποτέ σε sitemap, ούτε σε κλειστό site.
     ...guides.filter((g) => !g.draft).map((g) => ({ path: `/odigoi/${g.slug}`, priority: 0.8 })),
+    // Οι νομικές σελίδες μπαίνουν με χαμηλή προτεραιότητα: πρέπει να είναι
+    // ευρέσιμες, δεν διεκδικούν κατάταξη.
+    ...legalSlugs.map((slug) => ({ path: `/${slug}`, priority: 0.3 })),
   ];
 
   const entries = locales.flatMap((locale) =>
