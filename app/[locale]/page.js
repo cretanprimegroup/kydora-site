@@ -21,7 +21,7 @@ export default async function Home({ params }) {
             <p className="lede">{t.hero.support}</p>
             <div className="routes">
               <a className="btn btn-1" href={`/${locale}#properties`}>{t.hero.cta1}</a>
-              <a className="btn btn-2" href={`/${locale}#seller`}>{t.hero.cta2}</a>
+              <a className="btn btn-2" href={`/${locale}/polisi`}>{t.hero.cta2}</a>
               <a className="btn-3" href={`/${locale}#buyer`}>
                 <span>{t.hero.cta3}</span>
                 <span className="arw" aria-hidden="true">→</span>
@@ -92,7 +92,9 @@ export default async function Home({ params }) {
             <p className="body">{t.seller.body}</p>
             <p className="quote">{t.seller.quote}</p>
             <div className="acts">
-              <a className="btn btn-1" href={`/${locale}/epikoinonia`}>{t.seller.cta}</a>
+              {/* Οδηγεί στη σελίδα Πώληση, όχι στη γενική επικοινωνία: ο
+                  ιδιοκτήτης θέλει να διαβάσει πρώτα πώς δουλεύουμε. */}
+              <a className="btn btn-1" href={`/${locale}/polisi`}>{t.seller.cta}</a>
             </div>
           </div>
           <div className="plate"><span className="mark" aria-hidden="true" /></div>

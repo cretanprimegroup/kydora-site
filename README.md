@@ -23,6 +23,7 @@
 | `components/` | Κάρτα ακινήτου και φόρμα επικοινωνίας. |
 | `content/guides.js` | Οι οδηγοί GR/EN. Δημοσιεύονται μόνο μετά από έγκριση στο Notion. |
 | `content/legal.js` | Τα τέσσερα νομικά κείμενα GR/EN και τα επίσημα στοιχεία της εταιρείας. |
+| `content/seller.js` | Η σελίδα Πώληση GR/EN. Πηγή: Seller Landing Page V1 (Notion). |
 | `components/CookieConsent.js` | Banner, preference centre και η πύλη του GA4. |
 
 ### Νομικές σελίδες και cookies
@@ -95,8 +96,9 @@ npm run dev
 ## Εκκρεμότητες
 
 - [ ] Φωτογραφίες ακινήτων — κάθε `.plate` στον κώδικα είναι θέση φωτογραφίας
-- [ ] Σελίδες Seller / Buyer / Developers
-- [ ] Ειδικές φόρμες Seller / Buyer / Investor / Developer (Contact V1 §5) — τώρα όλα περνούν από τη γενική
+- [x] Σελίδα Πώληση (`/polisi`) με φόρμα Seller Consultation
+- [ ] Σελίδες Buyer / Developers — το μενού δείχνει ακόμα σε anchors της αρχικής
+- [ ] Ειδικές φόρμες Buyer / Investor / Developer (Contact V1 §5) — ο ιδιοκτήτης έχει τη δική του
 - [ ] Φίλτρα και ταξινόμηση στη σελίδα ακινήτων (Listing & Search V1 §2–3)
 - [ ] Υπολογιστές δόσης και εξόδων αγοράς (Property Detail V1 §8)
 - [ ] Gallery, κάτοψη, παρόμοια ακίνητα (Property Detail V1 §6, §10)

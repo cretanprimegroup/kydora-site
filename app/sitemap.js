@@ -17,6 +17,8 @@ export default async function sitemap() {
   const pages = [
     { path: '', priority: 1 },
     { path: '/akinita', priority: 0.9 },
+    // Η σελίδα Πώληση είναι η κύρια σελίδα απόκτησης αναθέσεων.
+    { path: '/polisi', priority: 0.9 },
     { path: '/epikoinonia', priority: 0.7 },
     { path: '/odigoi', priority: 0.7 },
     // Τα προσχέδια δεν μπαίνουν ποτέ σε sitemap, ούτε σε κλειστό site.

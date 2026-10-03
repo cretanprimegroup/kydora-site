@@ -2,9 +2,14 @@
 
 import { useState } from 'react';
 
-// Δύο παραλλαγές:
+// Τρεις παραλλαγές:
 //   mode="general"  — γενική φόρμα επικοινωνίας (Contact Page V1 §4)
 //   mode="property" — αίτημα για συγκεκριμένο ακίνητο (Property Detail V1 §9)
+//   mode="seller"   — Seller Consultation (Seller Landing Page §9)
+//
+// Η φόρμα ιδιοκτήτη ζητά σκόπιμα ΜΟΝΟ τα βασικά: τύπο ακινήτου, περιοχή και
+// χρονικό ορίζοντα. Όχι πλήρη φάκελο, όχι ακριβή διεύθυνση, κανένα έγγραφο —
+// ρητή απόφαση της πηγής, και συμφωνεί με το Privacy Notice.
 //
 // Κάθε υποβολή κουβαλά τη σελίδα, τη γλώσσα και τον κωδικό ακινήτου, ώστε να
 // ξέρουμε από πού ήρθε το lead. Δεν στέλνεται τίποτα πριν δοθεί συγκατάθεση.
@@ -29,6 +34,12 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
       when: get('when'),
       reason: get('reason'),
       intent: get('intent'),
+      propertyType: get('propertyType'),
+      area: get('area'),
+      timeline: get('timeline'),
+      priceExpectation: get('priceExpectation'),
+      contactPref: get('contactPref'),
+      formType: mode,
       consent: fd.get('consent') === 'on',
       website: get('website'), // honeypot
       startedAt,
@@ -38,6 +49,11 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
     };
 
     if (!payload.name || (mode === 'general' && !payload.message)) {
+      setError(f.errRequired);
+      setState('error');
+      return;
+    }
+    if (mode === 'seller' && !payload.area) {
       setError(f.errRequired);
       setState('error');
       return;
@@ -75,7 +91,9 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
         <p>
           {mode === 'property' && propertyCode
             ? f.successProperty.replace('{code}', propertyCode)
-            : f.success}
+            : mode === 'seller'
+              ? f.successSeller
+              : f.success}
         </p>
       </div>
     );
@@ -109,7 +127,47 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
 
         <p className="hint full">{f.contactHint}</p>
 
-        {mode === 'general' ? (
+        {mode === 'seller' ? (
+          <>
+            <p className="field">
+              <label htmlFor="cf-ptype">{f.propertyType}</label>
+              <select id="cf-ptype" name="propertyType" defaultValue={f.propertyTypes[0]}>
+                {f.propertyTypes.map((r) => (
+                  <option key={r} value={r}>{r}</option>
+                ))}
+              </select>
+            </p>
+            <p className="field">
+              <label htmlFor="cf-area">{f.area}</label>
+              <input id="cf-area" name="area" type="text" required />
+            </p>
+            <p className="hint full">{f.areaHint}</p>
+            <p className="field">
+              <label htmlFor="cf-timeline">{f.timeline}</label>
+              <select id="cf-timeline" name="timeline" defaultValue={f.timelines[0]}>
+                {f.timelines.map((r) => (
+                  <option key={r} value={r}>{r}</option>
+                ))}
+              </select>
+            </p>
+            <p className="field">
+              <label htmlFor="cf-price">
+                {f.priceExpectation}<span className="opt">{opt}</span>
+              </label>
+              <input id="cf-price" name="priceExpectation" type="text" inputMode="numeric" />
+            </p>
+            <p className="field">
+              <label htmlFor="cf-pref">
+                {f.contactPref}<span className="opt">{opt}</span>
+              </label>
+              <select id="cf-pref" name="contactPref" defaultValue={f.contactPrefs[0]}>
+                {f.contactPrefs.map((r) => (
+                  <option key={r} value={r}>{r}</option>
+                ))}
+              </select>
+            </p>
+          </>
+        ) : mode === 'general' ? (
           <>
             <p className="field">
               <label htmlFor="cf-reason">{f.reason}</label>
@@ -144,9 +202,9 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
         <p className="field full">
           <label htmlFor="cf-message">
             {f.message}
-            {mode === 'property' ? <span className="opt">{opt}</span> : null}
+            {mode === 'general' ? null : <span className="opt">{opt}</span>}
           </label>
-          <textarea id="cf-message" name="message" rows={mode === 'property' ? 4 : 6} />
+          <textarea id="cf-message" name="message" rows={mode === 'general' ? 6 : 4} />
         </p>
 
         <p className="check full">
@@ -161,9 +219,20 @@ export default function ContactForm({ f, locale, mode = 'general', propertyCode 
 
       <div className="form-foot">
         <button className="btn btn-1" type="submit" disabled={state === 'sending'}>
-          {state === 'sending' ? f.sending : mode === 'property' ? f.submitProperty : f.submit}
+          {state === 'sending'
+            ? f.sending
+            : mode === 'property'
+              ? f.submitProperty
+              : mode === 'seller'
+                ? f.submitSeller
+                : f.submit}
         </button>
-        <p className="privacy">{f.privacy}</p>
+        {/* Σύνδεσμος προς την πολιτική στο σημείο συλλογής, όπως θέλει ο
+            Κανονισμός — όχι μόνο στο υποσέλιδο. */}
+        <p className="privacy">
+          {f.privacy}{' '}
+          <a href={`/${locale}/privacy-policy`}>{f.privacyLinkText}</a>
+        </p>
       </div>
     </form>
   );

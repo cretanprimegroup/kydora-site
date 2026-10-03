@@ -105,7 +105,7 @@ export default function LocaleLayout({ children, params }) {
   // Ένας κατάλογος για τα δύο μενού, ώστε να μη διαφωνήσουν ποτέ μεταξύ τους.
   const nav = [
     { href: `/${locale}/akinita`, label: t.nav.properties },
-    { href: `/${locale}#seller`, label: t.nav.selling },
+    { href: `/${locale}/polisi`, label: t.nav.selling },
     { href: `/${locale}#buyer`, label: t.nav.buying },
     { href: `/${locale}#buyer`, label: t.nav.investments },
     { href: `/${locale}#developers`, label: t.nav.developers },
@@ -170,7 +170,7 @@ export default function LocaleLayout({ children, params }) {
               </div>
               <div>
                 <h4>{t.footer.services}</h4>
-                <p><a href={`/${locale}#seller`}>{t.nav.selling}</a></p>
+                <p><a href={`/${locale}/polisi`}>{t.nav.selling}</a></p>
                 <p><a href={`/${locale}#buyer`}>{t.nav.buying}</a></p>
                 <p><a href={`/${locale}#buyer`}>{t.nav.investments}</a></p>
                 <p><a href={`/${locale}#developers`}>{t.nav.developers}</a></p>

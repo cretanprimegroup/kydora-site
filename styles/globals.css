@@ -531,6 +531,81 @@ footer { padding-block: 44px 52px; }
   margin-top: 16px; font-family: var(--f-body); font-size: 0.74rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone);
 }
+/* ── Σελίδα Πώληση ──────────────────────────────────────────────────────── */
+.s-quote { margin-top: 26px; }
+.s-h { max-width: 30ch; margin-bottom: clamp(26px, 3vw, 40px); }
+
+/* Η δωρεάν αξιολόγηση. Ξεχωρίζει με bronze χείλος, όχι με γεμάτο χρώμα —
+   η παλέτα είναι κλειδωμένη και το bronze είναι accent, επιλεκτικά. */
+.s-offer { padding-block: clamp(40px, 4.6vw, 64px); }
+.s-offer-in {
+  border: 1px solid var(--rule); border-left: 3px solid var(--bronze);
+  background: var(--surface);
+  padding: clamp(26px, 3.4vw, 44px);
+  display: grid; gap: clamp(22px, 3vw, 44px);
+  grid-template-columns: 1fr;
+}
+.s-offer-in h2 { font-size: clamp(1.4rem, 2.6vw, 1.95rem); max-width: 22ch; }
+.s-offer-side p { font-size: 0.92rem; line-height: 1.75; color: var(--fg-2); }
+.s-fine {
+  margin-top: 14px; font-family: var(--f-body); font-size: 0.8rem;
+  line-height: 1.7; color: var(--stone);
+}
+.s-fine-c { max-width: 72ch; margin-top: 26px; }
+
+/* Τα δέκα βήματα. Αριθμοί σε bronze, μικροί — δομή, όχι διακόσμηση. */
+.s-steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 1px; background: var(--rule-soft);
+  grid-template-columns: 1fr;
+}
+.s-steps li { background: var(--bg); padding: clamp(20px, 2.4vw, 28px); }
+.s-num {
+  display: block; font-family: var(--f-body); font-size: 0.72rem;
+  letter-spacing: 0.14em; color: var(--bronze); margin-bottom: 10px;
+}
+.s-steps h3 { font-size: 1.02rem; font-family: var(--f-body); font-weight: 600; }
+.s-steps p { margin-top: 8px; font-size: 0.9rem; line-height: 1.7; color: var(--fg-2); }
+
+/* Τρεις τρόποι συνεργασίας. */
+.s-cards { display: grid; gap: clamp(18px, 2.2vw, 28px); grid-template-columns: 1fr; }
+.s-card { border-top: 2px solid var(--olive); padding-top: 20px; }
+.s-card h3 { font-size: 1.12rem; }
+.s-card p { margin-top: 10px; font-size: 0.92rem; line-height: 1.75; color: var(--fg-2); }
+
+.s-list { list-style: none; margin: 22px 0 0; padding: 0; }
+.s-list li {
+  padding: 13px 0 13px 24px; border-bottom: 1px solid var(--rule-soft);
+  font-size: 0.95rem; line-height: 1.7; color: var(--fg-2); position: relative;
+}
+.s-list li::before {
+  content: ''; position: absolute; left: 0; top: 21px;
+  width: 9px; height: 1px; background: var(--bronze);
+}
+.s-list li:first-child { padding-top: 0; }
+.s-list li:first-child::before { top: 8px; }
+
+.s-proof .btn-3 { margin-top: 20px; }
+
+.s-faq { margin: 0; display: grid; gap: 0; }
+.s-faq > div { border-top: 1px solid var(--rule-soft); padding-block: clamp(20px, 2.4vw, 28px); }
+.s-faq > div:last-child { border-bottom: 1px solid var(--rule-soft); }
+.s-faq dt { font-size: 1.05rem; font-weight: 600; color: var(--fg); max-width: 54ch; }
+.s-faq dd { margin: 10px 0 0; font-size: 0.95rem; line-height: 1.78; color: var(--fg-2); max-width: 70ch; }
+
+.s-form { background: var(--surface); padding-block: clamp(48px, 5.4vw, 80px); }
+.s-form-in { max-width: 680px; }
+.s-form-in .lede { margin-top: 14px; }
+.s-form-in .form { margin-top: clamp(26px, 3vw, 38px); }
+
+@media (min-width: 760px) {
+  .s-cards { grid-template-columns: repeat(3, 1fr); }
+  .s-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .s-offer-in { grid-template-columns: 1.15fr 1fr; align-items: start; }
+}
+
 /* Υπόλοιπες νομικές σελίδες, στο τέλος κάθε νομικού κειμένου. */
 .l-other { margin-top: clamp(36px, 4vw, 52px); padding-top: 26px; border-top: 1px solid var(--rule-soft); }
 .l-other h2 { font-size: 0.74rem; font-family: var(--f-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); }
