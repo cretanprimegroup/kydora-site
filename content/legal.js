@@ -30,6 +30,11 @@ export const entity = {
   brand: 'KYDORA — Real Estate & Investments',
   afm: '803168861',
   gemi: '191201158000',
+  // Αριθμός μητρώου μεσίτη — εκδόθηκε, επιβεβαιώθηκε 03/10/2026.
+  // ⚠️ Η ΑΚΡΙΒΗΣ ΕΠΙΣΗΜΗ ΔΙΑΤΥΠΩΣΗ εκκρεμεί επιβεβαίωση από τη δικηγόρο:
+  // ποιο μητρώο και ποιο Επιμελητήριο αναγράφονται μαζί με τον αριθμό.
+  // Λάθος διατύπωση σε υποχρεωτική ένδειξη είναι σαν να μην υπάρχει.
+  broker: '159',
   seatEl: 'Πλατανιάς, Χανιά, Κρήτη',
   seatEn: 'Platanias, Chania, Crete, Greece',
   phone: '+30 28218 21705',
@@ -508,6 +513,7 @@ export const legalDocs = [
             ['Εμπορικό σήμα.', 'KYDORA — Real Estate & Investments'],
             ['ΑΦΜ.', '803168861'],
             ['Αρ. Γ.Ε.ΜΗ.', '191201158000'],
+            ['Αριθμός μητρώου μεσίτη ακινήτων.', '159'],
             ['Έδρα.', 'Πλατανιάς, Χανιά, Κρήτη'],
           ],
         },
@@ -546,6 +552,7 @@ export const legalDocs = [
             ['Trading as.', 'KYDORA — Real Estate & Investments'],
             ['VAT number (ΑΦΜ).', '803168861'],
             ['Companies Registry (Γ.Ε.ΜΗ.).', '191201158000'],
+            ['Real estate agent registration number.', '159'],
             ['Registered office.', 'Platanias, Chania, Crete, Greece'],
           ],
         },

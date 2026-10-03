@@ -267,7 +267,9 @@ export const copy = {
       address: 'Πλατανιάς, Χανιά, Κρήτη',
       legalName: 'KYDORA Real Estate & Investments',
       endorsement: 'by Cretan Prime Group',
-      ids: 'ΑΦΜ 803168861 · Αρ. Γ.Ε.ΜΗ. 191201158000',
+      // Ο αριθμός μητρώου μεσίτη είναι υποχρεωτική ένδειξη, γι' αυτό μπαίνει
+      // στο υποσέλιδο κάθε σελίδας και όχι μόνο στη Νομική Γνωστοποίηση.
+      ids: 'ΑΦΜ 803168861 · Αρ. Γ.Ε.ΜΗ. 191201158000 · Μητρώο μεσίτη 159',
       tagline: 'Real Estate. Considered.',
     },
   },
@@ -530,7 +532,7 @@ export const copy = {
       address: 'Platanias, Chania, Crete',
       legalName: 'KYDORA Real Estate & Investments',
       endorsement: 'by Cretan Prime Group',
-      ids: 'VAT 803168861 · GEMI 191201158000',
+      ids: 'VAT 803168861 · GEMI 191201158000 · Agent reg. 159',
       tagline: 'Real Estate. Considered.',
     },
   },
